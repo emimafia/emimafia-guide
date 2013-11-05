@@ -16,6 +16,9 @@
   <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <script type="text/javascript" src="lib/html5shiv.js"></script>
+  <script type="text/javascript" src="lib/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="scripts/js/ajax.js"></script>
 </head>
 
 <body>
