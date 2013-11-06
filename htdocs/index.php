@@ -65,6 +65,8 @@
        	Gandalf-/Weberstyle<br />
        	<br />
        	Das wird auch noch besser durchgestylt.<br />
+       	<br />
+       	Grundfarben würde ich antrahzit/gelb nehmen.<br />
       </article>
       <div id="audio">
       	Playa
