@@ -9,3 +9,124 @@
 	margin: 0;
 	padding: 0;
 }
+body {
+	background: url('images/metal2.jpg') no-repeat fixed center top #4C4C4C;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.7em;
+}
+h3 {
+	font-size: 1.5em;
+}
+a {
+	color: #008000;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+.clearfix {
+	clear: both;
+}
+
+/**
+ * 	Positioning
+ */
+#wrapper {
+	width: 960px;
+	margin: 10px auto;
+}
+#content {
+	position: relative;
+}
+nav {
+	position: absolute;
+	top: 3px;
+	left: -100px;
+}
+
+/**
+ * 	Header
+ */
+header {
+	background: #DDDDAA;
+	height: 350px;
+	border-radius: 5px 5px 0 0;
+}
+header h1 {
+	text-align: center;
+	vertical-align: middle;
+}
+
+/**
+ * 	Content
+ */
+#content {
+	background: #CCCCCC;
+	min-height: 500px;
+	padding: 8px 12px;
+}
+#content article {
+	background: #FFFFFF;
+	width: 500px;
+	float: left;
+	min-height: 320px;
+}
+#content #audio {
+	background: #BBBBBB;
+	margin: 5px;
+	width: 425px;
+	height: 50px;
+	float: left;
+}
+#content #video {
+	background: #000000;
+	color: #FFFFFF;
+	margin: 5px;
+	width: 425px;
+	height: 250px;
+	float: left;
+}
+#content .thumbnail {
+	width: 100px;
+	height: 100px;
+	float: left;
+	background: #888888;
+	padding: 5px;
+	border: 1px solid #000000;
+	border-radius: 3px;
+	margin: 3px 5px;
+}
+/**
+ * 	Navigation
+ */
+nav {
+	background: #FFFF00;
+	width: 75px;
+	border-radius: 2px;
+}
+nav p {
+	padding: 2px;
+	font-weight: bold;
+}
+nav li {
+	padding: 2px 0;
+	margin: 2px 0;
+	background: #4C4C4C;
+}
+nav a {
+	font-weight: bold;
+	padding: 0 0 0 5px;
+}
+
+/**
+ * 	Footer
+ */
+footer {
+	background: #FFDDAA;
+	padding: 5px 10px;
+	border-radius: 0 0 5px 5px;
+}
