@@ -54,11 +54,17 @@
     		</ul>
     	</nav>
       <article>
-       Hier soll dann mal der Beschreibungtext rein<br />
-       Lorem Ipsum<br />
-       Dolor Et<br />
-       Bart Bart Bart Bart<br />
-       Gandalf-/Weberstyle<br />
+      	<h2>Ein Point of Interest</h2>
+       	Hier soll dann mal der Beschreibungtext rein<br />
+       	Lorem Ipsum<br />
+       	Dolor Et<br />
+       	<br />
+       	Ich werde Dir Punkte von Dresden zeigen, die Du nicht ablehnen kannst.<br />
+       	<br />
+       	Bart Bart Bart Bart<br />
+       	Gandalf-/Weberstyle<br />
+       	<br />
+       	Das wird auch noch besser durchgestylt.<br />
       </article>
       <div id="audio">
       	Playa
@@ -105,7 +111,9 @@
       <div class="clearfix"></div>
     </div>
     <footer>
-     <p>&copy; Copyright  by Christoph Kepler, Michael Schneider, Malte Pasche, Lukas Landgraf</p>
+   		<p>This City Guide of Dresden is brought to you by emimafia</p>
+   		<p>&nbsp;</p>
+    	<p>&copy; Copyright  by Christoph Kepler, Michael Schneider, Malte Pasche, Lukas Landgraf</p>
     </footer>
   </div>
 </body>

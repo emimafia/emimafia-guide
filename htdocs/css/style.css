@@ -107,6 +107,10 @@ nav {
 	background: #FFFF00;
 	width: 75px;
 	border-radius: 2px;
+	opacity: 0.4;
+}
+body:hover nav {
+	opacity: 1;
 }
 nav p {
 	padding: 2px;
@@ -118,6 +122,7 @@ nav li {
 	background: #4C4C4C;
 }
 nav a {
+	display: block;
 	font-weight: bold;
 	padding: 0 0 0 5px;
 }
