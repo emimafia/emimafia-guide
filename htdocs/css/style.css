@@ -10,7 +10,7 @@
 	padding: 0;
 }
 body {
-	background: url('images/metal2.jpg') no-repeat fixed center top #4C4C4C;
+	background: url('images/carbon-pattern.jpg') repeat-x fixed center top #1A1A1A;
 }
 h1 {
 	font-size: 2em;
@@ -91,14 +91,14 @@ header h1 {
 	float: left;
 }
 #content .thumbnail {
-	width: 100px;
-	height: 100px;
+	width: 105px;
+	height: 105px;
 	float: left;
 	background: #888888;
-	padding: 5px;
+	padding: 8px;
 	border: 1px solid #000000;
 	border-radius: 3px;
-	margin: 3px 5px;
+	margin: 5px;
 }
 /**
  * 	Navigation
@@ -107,9 +107,11 @@ nav {
 	background: #FFFF00;
 	width: 75px;
 	border-radius: 2px;
+}
+#wrapper:hover nav {
 	opacity: 0.4;
 }
-body:hover nav {
+#wrapper:hover nav:hover {
 	opacity: 1;
 }
 nav p {
