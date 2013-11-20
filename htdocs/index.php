@@ -38,19 +38,19 @@
     				<a href="/">Home</a>
     			</li>
     			<li>
-    				<a href="#">PoI 1</a>
+    				<a href="scripts/templates/poi.php?p=1">PoI 1</a>
     			</li>
     			<li>
-    				<a href="#">PoI 2</a>
+    				<a href="scripts/templates/poi.php?p=2">PoI 2</a>
     			</li>
     			<li>
-    				<a href="#">PoI 3</a>
+    				<a href="scripts/templates/poi.php?p=3">PoI 3</a>
     			</li>
     			<li>
-    				<a href="#">PoI 4</a>
+    				<a href="scripts/templates/poi.php?p=4">PoI 4</a>
     			</li>
     			<li>
-    				<a href="#">PoI 5</a>
+    				<a href="scripts/templates/poi.php?p=5">PoI 5</a>
     			</li>
     		</ul>
     	</nav>
@@ -198,5 +198,56 @@ function JSFX_FloatTopDiv()
 }
 JSFX_FloatTopDiv();
 </script>
+
+<script>
+	var loading ='<section class="loading"><img src="css/images/ajax-loader.gif" alt="Ajax Loader">Bitte warten, die Inhalte werden geladen...</section>';
+	
+	$(document).ready(function(){
+		$('nav a').click(function(){
+			link = $(this).attr('href');
+			
+			$('#content *').fadeOut('slow');
+			$('#content').animate({
+				height: "0",
+				paddingTop: "0",
+				paddingBottom: "0"
+			}, 'slow', function(){
+				$('#content div').remove();
+				$('footer').before(loading);
+				
+				$('#content').animate({
+					paddingTop: "20",
+					paddingBottom: "20",
+					height: "0"
+				}, 'slow');
+				
+				$.get(link, function(data, success){
+					if(success == 'success'){
+						$('#content').animate({
+							height: "0",
+							paddingTop: "0",
+							paddingBottom: "0"
+						}, 'slow', function(){
+							$('#content section').remove();
+							$('#content').html(data);
+						});
+					}
+				}).error(function(){
+					alert('Sie versuchen eine Seite zu öffnen die scheinbar nicht existiert.');
+				});
+			});
+			return false;
+		});
+	});
+	
+</script>
+
+
 </body>
 </html>
+
+
+
+
+
+
