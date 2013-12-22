@@ -40,8 +40,7 @@
   <div id="wrapper">
     <header>
       <h1>Emimafia Dresden Guide</h1>
-      <svg>
-      </svg>
+      <object data="svg/svg_arbeitsversion.svg" width="950" height="500"type="image/svg+xml"></object>
     </header>
     <div id="subheader"></div>
     <div id='content'>
