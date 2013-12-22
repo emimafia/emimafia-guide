@@ -50,12 +50,10 @@ ul {
 	margin: 10px auto;
 }
 #content {
-	position: relative;
 }
 nav {
 	position: fixed;
-	top: 45%;
-	left: 100px;
+	margin-top: -10px;
 }
 
 /**
@@ -138,32 +136,51 @@ header h1 {
  * 	Navigation
  */
 nav {
-	background: #222222;
-	width: 125px;
+	/*background: #222222;*/
 	border-radius: 2px;
+	width: 130px;
+	height: 100%;
 }
-#wrapper:hover nav {
-	opacity: 0.4;
+#nav-inner {
+	display: none;
+	float: left;
+	background: #FFDD57;
 }
-#wrapper:hover nav:hover {
-	opacity: 1;
+#nav-klapp {
+	display: inline-block;
+	color: #888888;
+	font-size: 20px;
+	font-weight: bold;
+}
+nav:hover #nav-inner {
+	display: inline-block;
+	height: 100%;
 }
 nav h3 {
 	color: #008000;
 	padding: 2px;
-}
-nav li {
-	padding: 2px 0;
-	margin: 2px 0;
-	background: #FFDD57;
+	float:left;
 }
 nav a {
-	font-size: 1.2em;
-	color: #222222;
-	display: block;
+	font-size: 2em;
+	display: inline-block;
 	font-weight: bold;
 	padding: 0 0 0 5px;
+	height: 50px;
+	width: 100px;
+	color: #222222;
 }
+
+/*
+ * Das bringt nicht viel, da das nav ja jetzt aus dem wrapper entfernt wurde. Die opacity müsste, wenn dann über, was anderes geregelt werden.
+ * 
+ * #wrapper:hover nav {
+ * 	opacity: 0.4;
+ * }
+ * #wrapper:hover nav:hover {
+ * 	opacity: 1;
+ * }
+ */
 
 /**
  * 	Footer

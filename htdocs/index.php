@@ -25,6 +25,18 @@
 </head>
 
 <body>
+	<nav>
+	<div id="nav-inner">
+		<h3>Navigation</h3>
+		<a href="/">Home</a>
+		<a href="scripts/templates/poi.php?p=1">PoI 1</a>
+		<a href="scripts/templates/poi.php?p=2">PoI 2</a>
+		<a href="scripts/templates/poi.php?p=3">PoI 3</a>
+		<a href="scripts/templates/poi.php?p=4">PoI 4</a>
+		<a href="scripts/templates/poi.php?p=5">PoI 5</a>
+	</div>
+	<div id="nav-klapp">=></div>
+	</nav>
   <div id="wrapper">
     <header>
       <h1>Emimafia Dresden Guide</h1>
@@ -33,29 +45,6 @@
     </header>
     <div id="subheader"></div>
     <div id='content'>
-    	<nav>
-    		<h3>Navigation</h3>
-    		<ul>
-    			<li>
-    				<a href="/">Home</a>
-    			</li>
-    			<li>
-    				<a href="scripts/templates/poi.php?p=1">PoI 1</a>
-    			</li>
-    			<li>
-    				<a href="scripts/templates/poi.php?p=2">PoI 2</a>
-    			</li>
-    			<li>
-    				<a href="scripts/templates/poi.php?p=3">PoI 3</a>
-    			</li>
-    			<li>
-    				<a href="scripts/templates/poi.php?p=4">PoI 4</a>
-    			</li>
-    			<li>
-    				<a href="scripts/templates/poi.php?p=5">PoI 5</a>
-    			</li>
-    		</ul>
-    	</nav>
       <div id="description">
       	<h2>Ein Point of Interest</h2>
       	<p>Lorem Ipsum fick dich in den Arsch. Ass Ass Bitch Hureeeeeee. Ich ficke dich beim Fußball, ich ficke dich beim Tennis, denn ich hab einen - Penis. Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem </p>
