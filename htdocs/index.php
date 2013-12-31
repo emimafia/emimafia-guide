@@ -17,10 +17,13 @@
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css" media="screen">
+  <link rel="stylesheet" href="css/style.css" media="screen"></script>
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
   <!-- Scripts -->
   <script type="text/javascript" src="lib/html5shiv.js"></script>
   <script type="text/javascript" src="lib/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="scripts/js/general.js"></script>
   <script type="text/javascript" src="scripts/js/ajax.js"></script>
 </head>
 
@@ -40,7 +43,7 @@
   <div id="wrapper">
     <header>
       <h1>Emimafia Dresden Guide</h1>
-      <object data="svg/svg_arbeitsversion.svg" width="950" height="500"type="image/svg+xml"></object>
+      <object data="svg/svg_arbeitsversion.svg" width="960" height="335" type="image/svg+xml"></object>
     </header>
     <div id="subheader"></div>
     <div id='content'>
@@ -73,23 +76,38 @@
       </div>
       <div class="clearfix"></div>
       <div id="gallery">
-      	Hier kommt der Flexslider dann rein. Dazu brauchen wir aber die php-Schleife.
-      	<div id="slide-nav">
-      		<div class="picture">
-      		</div>
-      		<div class="picture">
-      		</div>
-      		<div class="picture">
-      		</div>
-      		<div class="picture">
-      		</div>
-      	</div>
+      <div class="flexslider">
+			  	<ul class="slides">
+			  	<?php
+								$dir = 'media/images';
+								if(!is_dir($dir)){
+								mkdir($dir,0755);
+								}
+			  		$tmp = opendir($dir);
+			      while($file=readdir($tmp)){
+			        $fname = $dir . '/' . $file;
+			        $tnname = $dir . '/tn_' . $file; 
+			        if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
+			          echo '
+			    <li>
+			    	<img class="thumb" src="' . $tnname . '"  />
+			    </li>';
+			        }
+			      }
+			      closedir($tmp);
+			    ?>
+			 	 </ul>
+				</div>
       </div>
       <div class="clearfix"></div>
     </div>
     <footer>
     <div id="additional-links"><a>Impressum</a> | <a>Contact</a> | <a>FAQ</a></div>
     </footer>
+    <div id="show_original" class="close">
+    </div>   
+    <div id="grey" class="close">
+  	</div>
   </div>
 </body>
 </html>
