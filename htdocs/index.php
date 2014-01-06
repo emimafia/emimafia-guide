@@ -6,25 +6,40 @@
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-  <title>Cityguide</title>
-  <meta name="description" content="" />
-  <meta name="author" content="emimafia" />
-
+  
+  <!-- Meta-Information -->
+  <title>Emimafia Cityguide Dresden</title>
+  <meta name="author" content="Emimafia">
+	<meta name="publisher" content="Emimafia">
+	<meta name="copyright" content="Emimafia">
+	<meta name="description" content="Ein virtueller Stadtführer für die sächsische Landeshauptstadt Dresden. Gezeigt werden verschiedene Sehenswürdigkeiten und unterschiedlciher medialer Darstellung. ">
+	<meta name="page-topic" content="Kultur">
+	<meta name="page-type" content="Bericht Reportage">
+	<meta name="audience" content="Alle">
+	<meta http-equiv="content-language" content="de">
+	<meta name="robots" content="index, follow">
+	<meta name="DC.Creator" content="Emimafia">
+	<meta name="DC.Publisher" content="Emimafia">
+	<meta name="DC.Rights" content="Emimafia">
+	<meta name="DC.Description" content="Ein virtueller Stadtführer für die sächsische Landeshauptstadt Dresden. Gezeigt werden verschiedene Sehenswürdigkeiten und unterschiedlciher medialer Darstellung. ">
+	<meta name="DC.Language" content="de">
   <meta name="viewport" content="width=device-width; initial-scale=1.0" />
 
-  <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="css/images/favicon.ico" />
+  
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css" media="screen"></script>
+  <link rel="stylesheet" href="css/style.css" media="screen">
   <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+  <link rel="stylesheet" href="css/lightbox.css" />
+  
   <!-- Scripts -->
   <script type="text/javascript" src="lib/html5shiv.js"></script>
   <script type="text/javascript" src="lib/jquery-2.0.3.min.js"></script>
 	<script type="text/javascript" src="lib/jquery.flexslider-min.js"></script>
-	<script type="text/javascript" src="scripts/js/general.js"></script>
+	<script type="text/javascript" src="lib/modernizr.custom.js"></script>
+	<script type="text/javascript" src="lib/lightbox-2.6.min.js"></script>
   <script type="text/javascript" src="scripts/js/ajax.js"></script>
+  <script type="text/javascript" src="scripts/js/general.js"></script>
 </head>
 
 <body>
@@ -90,7 +105,7 @@
 			        if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
 			          echo '
 			    <li>
-			    	<img class="thumb" src="' . $tnname . '"  />
+			    	<a href="' . $fname . '" data-lightbox="gallery"><img class="thumb" src="' . $tnname . '"  /></a>
 			    </li>';
 			        }
 			      }
@@ -104,10 +119,6 @@
     <footer>
     <div id="additional-links"><a>Impressum</a> | <a>Contact</a> | <a>FAQ</a></div>
     </footer>
-    <div id="show_original" class="close">
-    </div>   
-    <div id="grey" class="close">
-  	</div>
   </div>
 </body>
 </html>
