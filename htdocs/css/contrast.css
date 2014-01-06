@@ -1,6 +1,6 @@
 /**
  * 	Author: emimafia
- * 	General Stylesheet
+ * 	Contrast Stylesheet
  */
 
 html {
@@ -10,7 +10,7 @@ html {
 	padding: 0;
 }
 body {
-	background: url('images/bg.jpg') repeat fixed center top #1A1A1A;
+	background: #000000;
 }
 h1, h2, h3 {
 	font-weight: bold;

@@ -28,8 +28,8 @@
   <link rel="shortcut icon" href="css/images/favicon.ico" />
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css" media="screen">
-  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" media="screen" id="style" />
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css" />
   <link rel="stylesheet" href="css/lightbox.css" />
   
   <!-- Scripts -->
@@ -58,6 +58,15 @@
   <div id="wrapper">
     <header>
       <h1>Emimafia Dresden Guide</h1>
+      <div id="styleswitch">
+	      <div class="stylebuttons" onclick="styleswitch('plus')">+</div>
+	      <div class="stylebuttons" onclick="styleswitch('minus')">-</div>
+	      <div class="stylebuttons" onclick="styleswitch('contrast')">
+	      	<div id="contrast-y" class="contrast"></div>
+	      	<div id="contrast-c" class="contrast"></div>
+	      	<div id="contrast-b" class="contrast"></div>
+	      </div>
+      </div>
       <object data="svg/svg_arbeitsversion.svg" width="960" height="335" type="image/svg+xml"></object>
     </header>
     <div id="subheader"></div>
