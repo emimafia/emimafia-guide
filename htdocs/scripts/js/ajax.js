@@ -3,10 +3,6 @@
  * Our genius idea for ajaxing ^^
  */
 
-/**
- * @TODO We should do it. 
- */
-
 	var loading ='<section class="loading"><img src="css/images/ajax-loader.gif" alt="Ajax Loader">Bitte warten, die Inhalte werden geladen...</section>';
 	
 	$(document).ready(function(){
