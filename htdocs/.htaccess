@@ -9,3 +9,11 @@ ErrorDocument 403 /403
 ErrorDocument 404 /404
 
 </IfModule>
+
+AddType video/mp4 .mp4 
+AddType video/x-m4v .m4v
+AddType video/webm .webm 
+AddType audio/webm .weba
+AddType video/ogg .ogm 
+AddType video/ogg .ogv 
+AddType video/ogg .ogg

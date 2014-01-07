@@ -1,5 +1,4 @@
 <?php
-//header('Content-Type: text/html; charset=utf-8');
 require_once('connect.php');
 mysql_query('set names utf8');
 
@@ -22,11 +21,16 @@ mysql_query('set names utf8');
 </div>
 
 <div id="audio">
-	Playa
+	<audio> <!-- Audio geht noch gar nicht Ursache unbekannt... -->
+			<?php echo "<source src=\"media/audio/$title/$title.mp3\" type=\"audio/mpeg\" controls>"; ?>
+			<?php echo "<source src=\"media/audio/$title/$title.ogg\" type=\"audio/ogg\" controls>"; ?>
+	</audio>
 </div>
 
 <div id="video">
-	Youtube
+	<video>
+			<?php echo "<source src=\"media/video/$title/$title.ogv\" type=\"video/ogg\"  width=\"410\" height=\"250\"autobuffer controls>"; // Muss noch ausgebaut werden => Die Controls werden nicht angezeigt, Steuerung nur mit Rechtsklick möglich...?>
+	</video>
 </div>
 
 <div class="clearfix"></div>
@@ -35,14 +39,19 @@ mysql_query('set names utf8');
 <div class="flexslider">
 	<ul class="slides">
 	  	<?php
-		/*	$dir = 'media/images';
+	  		require_once('thumbnail.php');		// Funktion zum tumbnail erzeugen
+			$dir = "media/images/$title";		// Achtung Case Sensitiv => Title großgeschrieben => Ordnername großschreiben!
 			if(!is_dir($dir)){
-				mkdir($dir,0755);
-							}
+			//	mkdir($dir,0755); 			Notwendig das zu erzeugen???? Wird doch eh von uns von Hand angelegt Es sollte reichen zu prüfen ob das ein Ordner ist und wenn ja, dann weiter nach else
+							}else {
+													
 			$tmp = opendir($dir);
 		      while($file=readdir($tmp)){
 			        $fname = $dir . '/' . $file;
 			        $tnname = $dir . '/tn_' . $file; 
+					if(!is_file($tnname) && is_file($fname)==FALSE){					// Prüfen ob thumb existiert => Wenn nicht erzeugen!
+						thumbnailing($dir . '/' . $fname,$dir . $tnname,80,80,70);
+					}
 			        if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
 			          echo '
 			    <li>
@@ -50,8 +59,10 @@ mysql_query('set names utf8');
 			    </li>';
 			        }
 			      }
-			      closedir($tmp); */
+			      closedir($tmp); 
+				  }
 		    ?>
+		    
 		 	 </ul>
 			</div>
 </div>
