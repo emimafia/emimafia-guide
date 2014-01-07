@@ -1,7 +1,8 @@
 <?php
+//header('Content-Type: text/html; charset=utf-8');
 require_once('connect.php');
-?>
-<?php
+mysql_query('set names utf8');
+
     $poi = $_GET['p'];
 	$query = "SELECT * FROM `POI` WHERE ID=\"$poi\"";
 	$result = mysql_query($query);
@@ -9,8 +10,8 @@ require_once('connect.php');
 		echo "Fehler bei der Abfrage!";
 	}else{
 		while ($row = mysql_fetch_object($result)){
-			$title = htmlentities($row -> Name);
-			$desc = htmlentities($row -> Desc);
+			$title = $row -> Name;
+			$desc = $row -> Desc;
 		}
 	}
 ?>
@@ -34,7 +35,7 @@ require_once('connect.php');
 <div class="flexslider">
 	<ul class="slides">
 	  	<?php
-			$dir = 'media/images';
+		/*	$dir = 'media/images';
 			if(!is_dir($dir)){
 				mkdir($dir,0755);
 							}
@@ -49,7 +50,7 @@ require_once('connect.php');
 			    </li>';
 			        }
 			      }
-			      closedir($tmp);
+			      closedir($tmp); */
 		    ?>
 		 	 </ul>
 			</div>
