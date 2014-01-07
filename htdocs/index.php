@@ -28,10 +28,8 @@
   <link rel="shortcut icon" href="css/images/favicon.ico" />
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/flexslider.css" type="text/css" />
-  <link rel="stylesheet" href="css/lightbox.css" />
-  <link rel="stylesheet" href="css/style.css" media="screen" id="style" />
-  <link rel="stylesheet" type="text/css" href="css/map.css"></link>
+  <link rel="stylesheet" href="css/include.css" id="style" />
+  <link rel="stylesheet" href="css/include_lib.css" />
   
   <!-- Scripts -->
   <script type="text/javascript" src="lib/html5shiv.js"></script>
@@ -130,13 +128,14 @@ function drawmap() {
 	<div id="nav-inner">
 		<h3>Navigation</h3>
 		<a href="/">Home</a>
-		<a href="scripts/templates/poi.php?p=1">PoI 1</a>
-		<a href="scripts/templates/poi.php?p=2">PoI 2</a>
-		<a href="scripts/templates/poi.php?p=3">PoI 3</a>
-		<a href="scripts/templates/poi.php?p=4">PoI 4</a>
-		<a href="scripts/templates/poi.php?p=5">PoI 5</a>
+		<a href="scripts/templates/poi.php?p=1">Frauenkirche</a>
+		<a href="scripts/templates/poi.php?p=2">Semperoper</a>
+		<a href="scripts/templates/poi.php?p=3">Großer Garten</a>
+		<a href="scripts/templates/poi.php?p=4">Altmarkt</a>
+		<a href="scripts/templates/poi.php?p=5">Waldschlösschen Brücke</a>
 	</div>
-	<div id="nav-klapp">=></div>
+<!-- 	@TODO maybe '▶' is a better marker -->
+	<div id="nav-switch">=></div>
 	</nav>
   <div id="wrapper">
     <header>

@@ -36,13 +36,13 @@ function styleswitch(action) {
 			document.getElementById("additional-links").style.width = "200px";
 		break;
 		case 'contrast':
-			if(element.getAttribute('href')=="css/style.css") {
+			if(element.getAttribute('href')=="css/include.css") {
 				element.removeAttribute("href");
-				element.setAttribute("href", "css/contrast.css");
+				element.setAttribute("href", "css/include_contrast.css");
 			}
 			else {
 				element.removeAttribute("href");
-				element.setAttribute("href", "css/style.css");				
+				element.setAttribute("href", "css/include.css");				
 			}
 		break;
 		default:
