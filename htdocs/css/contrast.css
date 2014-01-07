@@ -11,6 +11,7 @@ html {
 }
 body {
 	background: #000000;
+	margin: 0;
 }
 h1, h2, h3 {
 	font-weight: bold;
@@ -141,10 +142,13 @@ header h1 {
 	height: 140px;
 	position: relative;
 }
-#gallery #slide-nav {
+#gallery .flex-control-nav {
 	position: absolute;
 	top: -14px;
 	right: 50%;
+}
+#gallery .flexslider {
+	border-radius: 0;
 }
 #gallery .picture {
 	margin: 2px;
