@@ -2,3 +2,4 @@ config
 .project
 .settings
 htdocs/scripts/templates/dbconnect.inc.php
+htdocs/.metadata
