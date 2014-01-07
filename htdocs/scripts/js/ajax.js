@@ -9,14 +9,14 @@
 		$('nav a').click(function(){
 			link = $(this).attr('href');
 			
-			$('#content *').fadeOut('slow');
+			$('#content div').fadeOut('slow');
 			$('#content').animate({
 				height: "0",
 				paddingTop: "0",
 				paddingBottom: "0"
 			}, 'slow', function(){
 				$('#content div').remove();
-				$('footer').before(loading);
+				$('content').append(loading);
 				
 				$('#content').animate({
 					paddingTop: "20",
