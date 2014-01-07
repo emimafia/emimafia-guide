@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html class="no-js" lang="de">
 <head>
   <meta charset="utf-8" />
 
@@ -28,9 +28,9 @@
   <link rel="shortcut icon" href="css/images/favicon.ico" />
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css" media="screen" id="style" />
   <link rel="stylesheet" href="css/flexslider.css" type="text/css" />
   <link rel="stylesheet" href="css/lightbox.css" />
+  <link rel="stylesheet" href="css/style.css" media="screen" id="style" />
   
   <!-- Scripts -->
   <script type="text/javascript" src="lib/html5shiv.js"></script>
@@ -39,7 +39,14 @@
 	<script type="text/javascript" src="lib/modernizr.custom.js"></script>
 	<script type="text/javascript" src="lib/lightbox-2.6.min.js"></script>
   <script type="text/javascript" src="scripts/js/ajax.js"></script>
-  <script type="text/javascript" src="scripts/js/general.js"></script>
+  <script type="text/javascript" src="scripts/js/general.js"></script> 
+	<noscript>
+		<div id="greybox">
+			<div id="alert">
+				JavaScript ist nicht aktiviert. Bitte aktivieren Sie JavaScript, um den vollen Funktionsumfang der Seite nutzen zu können.
+			</div>
+		</div>
+	</noscript>
 </head>
 
 <body>
@@ -114,7 +121,7 @@
 			        if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
 			          echo '
 			    <li>
-			    	<a href="' . $fname . '" data-lightbox="gallery"><img class="thumb" src="' . $tnname . '"  /></a>
+			    	<a href="' . $fname . '" data-lightbox="gallery" title="<a id=\'link-to-point\'>The Specific Point of Interest</a>"><img class="thumb" src="' . $tnname . '"  /></a>
 			    </li>';
 			        }
 			      }
