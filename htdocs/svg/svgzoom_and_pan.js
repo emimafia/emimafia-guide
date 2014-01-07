@@ -94,7 +94,7 @@ function setupHandlers(root){
 		"onmouseup" : "handleMouseUp(evt)",
 		"onmousedown" : "handleMouseDown(evt)",
 		"onmousemove" : "handleMouseMove(evt)",
-		//"onmouseout" : "handleMouseUp(evt)", // Decomment this to stop the pan functionality when dragging out of the SVG element
+		"onmouseout" : "handleMouseUp(evt)", // Decomment this to stop the pan functionality when dragging out of the SVG element
 	});
 
 	if(navigator.userAgent.toLowerCase().indexOf('webkit') >= 0)
@@ -202,6 +202,74 @@ function handleMouseWheel(evt) {
 		stateTf = g.getCTM().inverse();
 
 	stateTf = stateTf.multiply(k.inverse());
+}
+
+function zoomInClick(){
+	if(!enableZoom)
+		return;
+
+	if(evt.preventDefault)
+		evt.preventDefault();
+
+	evt.returnValue = false;
+
+	var svgDoc = evt.target.ownerDocument;
+
+	
+
+	var z = Math.pow(1 + zoomScale, 1);
+
+	var g = getRoot(svgDoc);
+	
+	var p = getEventPoint(evt);
+
+	p = p.matrixTransform(g.getCTM().inverse());
+
+	// Compute new scale matrix in current mouse position
+	var k = root.createSVGMatrix().translate(p.x, p.y).scale(z).translate(-p.x, -p.y);
+
+        setCTM(g, g.getCTM().multiply(k));
+
+	if(typeof(stateTf) == "undefined")
+		stateTf = g.getCTM().inverse();
+
+	stateTf = stateTf.multiply(k.inverse());
+	
+	
+}
+
+function zoomInClick(){
+	if(!enableZoom)
+		return;
+
+	if(evt.preventDefault)
+		evt.preventDefault();
+
+	evt.returnValue = false;
+
+	var svgDoc = evt.target.ownerDocument;
+
+	
+
+	var z = Math.pow(1 + zoomScale, -1);
+
+	var g = getRoot(svgDoc);
+	
+	var p = getEventPoint(evt);
+
+	p = p.matrixTransform(g.getCTM().inverse());
+
+	// Compute new scale matrix in current mouse position
+	var k = root.createSVGMatrix().translate(p.x, p.y).scale(z).translate(-p.x, -p.y);
+
+        setCTM(g, g.getCTM().multiply(k));
+
+	if(typeof(stateTf) == "undefined")
+		stateTf = g.getCTM().inverse();
+
+	stateTf = stateTf.multiply(k.inverse());
+	
+	
 }
 
 /**
