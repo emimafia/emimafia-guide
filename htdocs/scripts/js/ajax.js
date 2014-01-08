@@ -33,6 +33,14 @@
 						}, 'slow', function(){
 							$('#content section').remove();
 							$('#content').html(data);
+							$('.flexslider').flexslider( {
+								animation : "slide",
+								animationLoop : true,
+								itemWidth : 102,
+								minItems : 2,
+								maxItems : 8,
+								controlsContainer : '.flex-container' 
+  });
 						});
 					}
 				}).error(function(){
