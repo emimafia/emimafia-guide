@@ -35,6 +35,9 @@ header {
 #content #video {
 	width: 405px;
 }
+#gallery .flexslider {
+	background: #000000;
+}
 nav h3 {
 	color: #FFFF00;
 }

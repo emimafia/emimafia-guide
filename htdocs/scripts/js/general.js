@@ -7,9 +7,9 @@ $(window).load(function() {
   $('.flexslider').flexslider( {
 		animation : "slide",
 		animationLoop : true,
-		itemWidth : 130,
+		itemWidth : 102,
 		minItems : 2,
-		maxItems : 7,
+		maxItems : 8,
 		controlsContainer : '.flex-container' 
   });
   /*
