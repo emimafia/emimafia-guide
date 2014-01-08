@@ -1,5 +1,5 @@
 config
 .project
 .settings
-htdocs/scripts/templates/connect.php
 htdocs/.metadata
+htdocs/scripts/templates/connect.php
