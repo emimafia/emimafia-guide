@@ -194,17 +194,34 @@ function drawmap() {
 								mkdir($dir,0755);
 								}
 			  		$tmp = opendir($dir);
-			      while($file=readdir($tmp)){
-			        $fname = $dir . '/' . $file;
-			        $tnname = $dir . '/tn_' . $file; 
-			        if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
-			          echo '
-			    <li>
-			    	<a href="' . $fname . '" data-lightbox="gallery" title="<a id=\'link-to-point\'>The Specific Point of Interest</a>"><img class="thumb" src="' . $tnname . '"  /></a>
-			    </li>';
-			        }
-			      }
+			  		while($file=readdir($tmp)) {
+			  			if($file != '.' && $file != '..') {
+			  				$dir_arr[] .= $file;
+			  			}
+			  		}
 			      closedir($tmp);
+			  		foreach($dir_arr as &$dir_arr_entry) {
+			  			$link = array (
+			  				'frauenkirche' => '1',
+			  				'semperoper' => '2',
+			  				'grossergarten' => '3',
+			  				'altmarkt' => '4',
+			  				'waldschloesschenbruecke' => '5',
+			  			);
+			  			$tmp = opendir($dir . '/' . $dir_arr_entry);
+			  			while($file=readdir($tmp)){
+				        $fname = $dir . '/' . $dir_arr_entry . '/' . $file;
+				        $tnname = $dir . '/' . $dir_arr_entry . '/tn_' . $file; 
+			        	if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
+			          	echo '
+			    <li>
+			    	<a href="' . $fname . '" data-lightbox="gallery" title="<a href=\'scripts/templates/poi.php?p=' . $link[$dir_arr_entry] . '\'>The Specific Point of Interest</a>"><img class="thumb" src="' . $tnname . '"  /></a>
+			    </li>';
+			        	}
+			      	}
+			      	closedir($tmp);
+			  		}
+			      
 			    ?>
 			 	 </ul>
 				</div>
