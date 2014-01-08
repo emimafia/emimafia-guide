@@ -30,26 +30,19 @@
 ?>
 
 <div id="audio">
-	<audio <?php 
-							/*HERE*/ echo 'src="media/audio/' . $lowertitle . '/' . $lowertitle . '.ogg" type="audio/ogg" controls' 
-					?>
-	>
+	<audio controls>
 			<?php
-			/**
-			 * @TODO I don't think that's the proper way. Look above for here.
-			 */
-// 				echo '<source src="media/audio/' . $lowertitle . '/' . $lowertitle . '.mp3" type="audio/mpeg" controls>';
-// 				echo '<source src="media/audio/' . $lowertitle . '/' . $lowertitle . '.ogg" type="audio/ogg" controls>';
+				echo '<source src="media/audio/' . $lowertitle . '/' . $lowertitle . '.mp3" type="audio/mpeg" controls>';
+				echo '<source src="media/audio/' . $lowertitle . '/' . $lowertitle . '.ogg" type="audio/ogg" controls>';
 			?>
 	</audio>
 </div>
 
 <div id="video">
-	<video <?php // @TODO same thing here like audio!!!
-				echo '<source src="media/video/' . $lowertitle . '/' . $lowertitle . '.ogv" type="video/ogg"  width="410" height="250" autobuffer controls>'; // Muss noch ausgebaut werden => Die Controls werden nicht angezeigt, Steuerung nur mit Rechtsklick möglich...
-					?>
-	>
-			
+	<video width="410" height="250" autobuffer controls>
+	<?php // @TODO same thing here like audio!!!
+		echo '<source src="media/video/' . $lowertitle . '/' . $lowertitle . '.ogv" type="video/ogg"  >'; // Muss noch ausgebaut werden => Die Controls werden nicht angezeigt, Steuerung nur mit Rechtsklick möglich...
+	?>		
 	</video>
 </div>
 
