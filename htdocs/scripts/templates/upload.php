@@ -4,8 +4,12 @@ require('calc_size.php');
 /**
  * I fixed it. The only thing you need to do is to give the right directory
  */
-title = ''; //Give the title as lowerstring here
+$title = ''; //Give the title as lowerstring here
 $dir = '../../media/images/' . $title;
+
+if($title == '') {
+	die('Keep the change you filthy animal.');
+}
 
 if(!is_dir($dir)){
   mkdir($dir,0755);
@@ -16,7 +20,6 @@ if(isset($_FILES) && count($_FILES)>0){
   $extensions = array('jpg','jpeg','png','gif');
   $ext = strtolower($info['extension']);
   $time = time();
-  echo time();
   if(in_array($ext,$extensions)) {
     do{
       $name = $time . "." . $ext;
@@ -27,9 +30,9 @@ if(isset($_FILES) && count($_FILES)>0){
     
     require('thumbnail.php');
    
-    thumbnailing($dir . '/' . $name,$dir . '/tn_' . $name,80,80,70); 
+    thumbnailing($dir . '/' . $name,$dir . '/tn_' . $name,100,100,70); 
     
-    echo '<script>top.location.href="' . $_SERVER['REQUEST_URI'] . '?erfolg=1"</script>';
+    echo '<script>top.location.href="' . $_SERVER['REQUEST_URI'] . '"</script>';
   }
 }
 
