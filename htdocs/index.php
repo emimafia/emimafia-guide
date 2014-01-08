@@ -105,6 +105,11 @@ function drawmap() {
     layer_mapnik = new OpenLayers.Layer.OSM.Mapnik("Mapnik");
     layer_markers = new OpenLayers.Layer.Markers("Address", { projection: new OpenLayers.Projection("EPSG:4326"), 
     	                                          visibility: true, displayInLayerSwitcher: false });
+   
+
+	OpenLayers.Marker.defaultIcon = function () {
+    	return new OpenLayers.Icon ("media/images/marker.png", {w:20, h:30}, {x: -10, y:-30});
+	};
 
     map.addLayers([layer_mapnik, layer_markers]);
     jumpTo(lon, lat, zoom);
