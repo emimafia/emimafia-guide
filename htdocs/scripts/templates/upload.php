@@ -1,7 +1,12 @@
 <?php
 
 require('calc_size.php');
-$dir = 'media/images';
+/**
+ * I fixed it. The only thing you need to do is to give the right directory
+ */
+title = ''; //Give the title as lowerstring here
+$dir = '../../media/images/' . $title;
+
 if(!is_dir($dir)){
   mkdir($dir,0755);
 }

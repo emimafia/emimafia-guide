@@ -70,10 +70,10 @@
 					  	$fname = $dir . '/' . $file;
 					    $tnname = $dir . '/tn_' . $file;
 							if(!is_file($tnname) && is_file($fname)==FALSE){					// Prüfen ob thumb existiert => Wenn nicht erzeugen!
+								//@TODO not needed at first. upload.php works now. and this perfectly!!!
 								thumbnailing($dir . '/' . $fname,$dir . $tnname,80,80,70); // @TODO He gets in it but the thumbnailing won't happen. Don't know if you can maybe add some return false for debugging?
 							}
 					    if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
-					    	var_dump('TOD');
 					    	echo '
 					    <li>
 					    	<a href="' . $fname . '" data-lightbox="gallery"><img class="thumb" src="' . $tnname . '"  /></a>
