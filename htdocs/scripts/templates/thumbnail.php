@@ -23,19 +23,19 @@
     
     switch($type){
       case 1 :
-        $handle=imagecreate($newwidth,$newheight);
+        $handle = imagecreate($newwidth,$newheight);
         $image = imagecreatefromgif($orig);
         imagecopyresampled($handle,$image,0,0,0,0,$newwidth,$newheight,$width,$height);
         imagegif($handle,$filename);
         break;
       case 2 :
-        $handle=imagecreatetruecolor($newwidth,$newheight);
+        $handle = imagecreatetruecolor($newwidth,$newheight);
         $image = imagecreatefromjpeg($orig);
         imagecopyresampled($handle,$image,0,0,0,0,$newwidth,$newheight,$width,$height);
         imagejpeg($handle,$filename,$quali);
         break;
       case 3 :
-        $handle=imagecreatetruecolor($newwidth,$newheight);
+        $handle = imagecreatetruecolor($newwidth,$newheight);
         $image = imagecreatefrompng($orig);
         imagecopyresampled($handle,$image,0,0,0,0,$newwidth,$newheight,$width,$height);
         imagepng($handle,$filename);
@@ -43,5 +43,4 @@
     }
     imagedestroy($handle);
   }
-  
 ?>
