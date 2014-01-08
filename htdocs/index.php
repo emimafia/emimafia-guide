@@ -37,6 +37,7 @@
 	<script type="text/javascript" src="lib/jquery.flexslider-min.js"></script>
 	<script type="text/javascript" src="lib/modernizr.custom.js"></script>
 	<script type="text/javascript" src="lib/lightbox-2.6.min.js"></script>
+	<script type="text/javascript" src="scripts/js/drawmap.js"></script>		<!-- Needed before ajax.js is included !!!! -->
   <script type="text/javascript" src="scripts/js/ajax.js"></script>
   <script type="text/javascript" src="scripts/js/general.js"></script> 
 	<noscript>
@@ -46,97 +47,26 @@
 			</div>
 		</div>
 	</noscript>
-  
-  <!-- von Lukas hinzugefügt -->
-  
+    
 <!--[if IE]>
 <link rel="stylesheet" type="text/css" href="ie_map.css"></link>
 <![endif]-->
 <script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
 <script type="text/javascript" src="http://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
 <script type="text/javascript" src="scripts/js/mapscr.js"></script>
- 
-<script type="text/javascript">
-//<![CDATA[
 
-var map;
-var layer_mapnik;
-var layer_tah;
-var layer_markers;
-
-function drawmap() {
-	
-	
-    // Popup und Popuptext
-    //HIER LINKS ZU POIs EINFÜGEN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    
-    //  						|
-    //  						|
-    //  						V
-    var popuptext="<a href=\"linkzumphpscript.php?irgendwas\"><font color=\"black\"><b>Dresden<br>Stadtmitte<br></b></font></a>";
-    var textfraukirch="<a href=\"linkzumphpscript.php?irgendwas\"><font color=\"black\"><b>Frauenkirche<br></b></font></a>";
-    var textaltmarkt="<a href=\"linkzumphpscript.php?irgendwas\"><font color=\"black\"><b>Altmarkt<br></b></font></a>";
-    var textgrossgart="<a href=\"linkzumphpscript.php?irgendwas\"><font color=\"black\"><b>Großer Garten<br></b></font></a>";
-    var textsemper="<a href=\"linkzumphpscript.php?irgendwas\"><font color=\"black\"><b>Semperoper</b></font></a>";
-    var textwaldschl="<a href=\"linkzumphpscript.php?irgendwas\"><font color=\"black\"><b>Waldschlößchenbrücke</b></font></a>";
-
-    OpenLayers.Lang.setCode('de');
-    
-    // Position und Zoomstufe der Karte
-    var lon = 13.73836112;
-    var lat = 51.059259;
-    var zoom = 13; 
-
-    map = new OpenLayers.Map('map', {
-        projection: new OpenLayers.Projection("EPSG:900913"),
-        displayProjection: new OpenLayers.Projection("EPSG:4326"),
-        controls: [
-            new OpenLayers.Control.Navigation(),
-            new OpenLayers.Control.LayerSwitcher(),
-            new OpenLayers.Control.PanZoomBar()],
-        maxExtent:
-            new OpenLayers.Bounds(-20037508.34,-20037508.34,
-                                    20037508.34, 20037508.34),
-        numZoomLevels: 18,
-        maxResolution: 156543,
-        units: 'meters'
-    });
-
-    layer_mapnik = new OpenLayers.Layer.OSM.Mapnik("Mapnik");
-    layer_markers = new OpenLayers.Layer.Markers("Address", { projection: new OpenLayers.Projection("EPSG:4326"), 
-    	                                          visibility: true, displayInLayerSwitcher: false });
-   
-
-	OpenLayers.Marker.defaultIcon = function () {
-    	return new OpenLayers.Icon ("media/images/marker.png", {w:20, h:30}, {x: -10, y:-30});
-	};
-
-    map.addLayers([layer_mapnik, layer_markers]);
-    jumpTo(lon, lat, zoom);
- 
-    // Position des Markers
-    addMarker(layer_markers, 13.741575, 51.051883333333, textfraukirch); //Frauenkirche
-    addMarker(layer_markers, 13.738030555556 ,51.049666666667, textaltmarkt); //Altmarkt
-    addMarker(layer_markers, 13.763055555556, 51.0375, textgrossgart); //Großer Garten
-    addMarker(layer_markers, 13.735169444444, 51.054508333333, textsemper); // Semperoper
-    addMarker(layer_markers, 13.776983333333, 51.063969444444, textwaldschl); //Waldschlößchenbrücke
-
-}
-
-//]]>
-    </script>
 
 </head>
 
-<body onload="drawmap()">
+<body>
 	<nav>
 	<div id="nav-inner">
 		<h3>Navigation</h3>
 		<a href="/">Home</a>
 		<a href="scripts/templates/poi.php?p=1">Frauenkirche</a>
 		<a href="scripts/templates/poi.php?p=2">Semperoper</a>
-		<a href="scripts/templates/poi.php?p=3">Großer Garten</a>
-		<a href="scripts/templates/poi.php?p=4">Altmarkt</a>
+		<a href="scripts/templates/poi.php?p=3">Altmarkt</a>
+		<a href="scripts/templates/poi.php?p=4">Großer Garten</a>
 		<a href="scripts/templates/poi.php?p=5">Waldschlösschen Brücke</a>
 	</div>
 <!-- 	@TODO maybe '▶' is a better marker -->
@@ -209,8 +139,8 @@ function drawmap() {
 			  			$link = array (
 			  				'frauenkirche' => '1',
 			  				'semperoper' => '2',
-			  				'grossergarten' => '3',
-			  				'altmarkt' => '4',
+			  				'altmarkt' => '3',
+			  				'grossergarten' => '4',
 			  				'waldschloesschenbruecke' => '5',
 			  			);
 			  			$tmp = opendir($dir . '/' . $dir_arr_entry);
