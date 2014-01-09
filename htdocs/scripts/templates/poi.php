@@ -52,7 +52,7 @@
 	<div class="flexslider">
 		<ul class="slides">
 			<?php
-				require_once('thumbnail.php');		// Funktion zum tumbnail erzeugen
+				//require_once('thumbnail.php');		// Funktion zum tumbnail erzeugen
 				$dir = '../../media/images/' . $lowertitle;		// We need to go to the right directory (../..) because this is not in /
 				if(!is_dir($dir)){
 // 					mkdir($dir,0755); 			Notwendig das zu erzeugen???? Wird doch eh von uns von Hand angelegt Es sollte reichen zu prüfen ob das ein Ordner ist und wenn ja, dann weiter nach else
@@ -62,10 +62,10 @@
 				  	while($file=readdir($tmp)){
 					  	$fname = $dir . '/' . $file;
 					    $tnname = $dir . '/tn_' . $file;
-							if(!is_file($tnname) && is_file($fname)==FALSE){					// Prüfen ob thumb existiert => Wenn nicht erzeugen!
+							//if(!is_file($tnname) && is_file($fname)==FALSE){					// Prüfen ob thumb existiert => Wenn nicht erzeugen!
 								//@TODO not needed at first. upload.php works now. and this perfectly!!!
-								thumbnailing($dir . '/' . $fname,$dir . $tnname,80,80,70); // @TODO He gets in it but the thumbnailing won't happen. Don't know if you can maybe add some return false for debugging?
-							}
+								//thumbnailing($dir . '/' . $fname,$dir . $tnname,80,80,70); // @TODO He gets in it but the thumbnailing won't happen. Don't know if you can maybe add some return false for debugging?
+							//}
 					    if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
 					    	echo '
 					    <li>
