@@ -32,11 +32,14 @@
   <link rel="stylesheet" href="css/include_lib.css" />
   
   <!-- Scripts -->
+  <!-- Libraries -->
   <script type="text/javascript" src="lib/html5shiv.js"></script>
   <script type="text/javascript" src="lib/jquery-2.0.3.min.js"></script>
 	<script type="text/javascript" src="lib/jquery.flexslider-min.js"></script>
 	<script type="text/javascript" src="lib/modernizr.custom.js"></script>
 	<script type="text/javascript" src="lib/lightbox-2.6.min.js"></script>
+	
+  <!-- Selfcoded -->
 	<script type="text/javascript" src="scripts/js/drawmap.js"></script>		<!-- Needed before ajax.js is included !!!! -->
   <script type="text/javascript" src="scripts/js/ajax.js"></script>
   <script type="text/javascript" src="scripts/js/general.js"></script> 
@@ -150,7 +153,7 @@
 			        	if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
 			          	echo '
 			    <li>
-			    	<a href="' . $fname . '" data-lightbox="gallery" title="<a href=\'scripts/templates/poi.php?p=' . $link[$dir_arr_entry] . '\'>The Specific Point of Interest</a>"><img class="thumb" src="' . $tnname . '"  /></a>
+			    	<a href="' . $fname . '" data-lightbox="gallery"><img class="thumb" src="' . $tnname . '"  /></a>
 			    </li>';
 			        	}
 			      	}
