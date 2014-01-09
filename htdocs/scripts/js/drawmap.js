@@ -49,7 +49,7 @@ function drawmap() {
    
 
 	OpenLayers.Marker.defaultIcon = function () {
-    	return new OpenLayers.Icon ("media/images/marker.png", {w:20, h:30}, {x: -10, y:-30});
+    	return new OpenLayers.Icon ("css/images/marker.png", {w:20, h:30}, {x: -10, y:-30});
 	};
 
     map.addLayers([layer_mapnik, layer_markers]);
