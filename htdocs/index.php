@@ -63,11 +63,11 @@
 	<div id="nav-inner">
 		<h3>Navigation</h3>
 		<a href="/">Home</a>
-		<a href="scripts/templates/poi.php?p=1">Frauenkirche</a>
-		<a href="scripts/templates/poi.php?p=2">Semperoper</a>
-		<a href="scripts/templates/poi.php?p=3">Altmarkt</a>
-		<a href="scripts/templates/poi.php?p=4">Großer Garten</a>
-		<a href="scripts/templates/poi.php?p=5">Waldschlösschen Brücke</a>
+		<a href="scripts/templates/poi.php?p=1" class="ajax-link">Frauenkirche</a>
+		<a href="scripts/templates/poi.php?p=2" class="ajax-link">Semperoper</a>
+		<a href="scripts/templates/poi.php?p=3" class="ajax-link">Altmarkt</a>
+		<a href="scripts/templates/poi.php?p=4" class="ajax-link">Großer Garten</a>
+		<a href="scripts/templates/poi.php?p=5" class="ajax-link">Waldschlösschen Brücke</a>
 	</div>
 <!-- 	@TODO maybe '▶' is a better marker -->
 	<div id="nav-switch">=></div>
