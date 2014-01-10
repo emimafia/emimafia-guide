@@ -22,18 +22,21 @@ function styleswitch(action) {
 	element = document.getElementById("style");
 	switch(action) {
 		case 'plus':
-			document.getElementById("description").style.fontSize = "20px";
-			document.getElementById("description").style.fontWeight = "bold";
-			document.getElementById("additional-links").style.fontSize = "20px";
-			document.getElementById("additional-links").style.fontWeight = "bold";
+			var list = document.getElementsByClassName("sw");
+			for (var i = 0; i < list.length; i++) {
+		  	list[i].style.fontSize = "20px";
+		  	list[i].style.fontWeight = "bold";
+			}
+			document.getElementsByTagName('footer')[0].style.height = "30px";
 			document.getElementById("additional-links").style.width = "255px";
 		break;
 		case 'minus':
-			document.getElementById("description").style.fontSize = "12px";
-			document.getElementById("description").style.fontWeight = "normal";
-			document.getElementById("additional-links").style.fontSize = "12px";
-			document.getElementById("additional-links").style.fontWeight = "normal";
-			document.getElementById("additional-links").style.width = "200px";
+			var list = document.getElementsByClassName("sw");
+			for (var i = 0; i < list.length; i++) {
+		  	list[i].removeAttribute('style');
+			}
+			document.getElementsByTagName('footer')[0].removeAttribute('style');
+			document.getElementById("additional-links").removeAttribute('style');
 		break;
 		case 'contrast':
 			if(element.getAttribute('href')=="css/include.css") {
