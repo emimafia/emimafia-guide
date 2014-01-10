@@ -6,7 +6,7 @@
 	
 	$(document).ready(function(){
 		drawmap();
-		$('a').click(function(){
+		$('a.ajax-link').click(function(){
 			link = $(this).attr('href');
 			
 			$('#content div').fadeOut('slow');
