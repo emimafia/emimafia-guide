@@ -95,32 +95,31 @@
     </header>
     <div id="subheader"></div>
     <div id='content'>
-      <div id="description">
-      	<h2>Poi blabla</h2>
-      	<p>Lorem Ipsum fick dich in den Arsch. Ass Ass Bitch Hureeeeeee. Ich ficke dich beim Fußball, ich ficke dich beim Tennis, denn ich hab einen - Penis. Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem </p>
-       	<p>Hier soll dann mal der Beschreibungtext rein<br />
-       	Lorem Ipsum<br />
-       	Dolor Et<br />
-       	</p>
-       	<p>
-       	Ich werde Dir Punkte von Dresden zeigen, die Du nicht ablehnen kannst.<br />
-       	</p>
-       	<p>
-       	Bart Bart Bart Bart<br />
-       	Gandalf-/Weberstyle<br />
-       	</p>
-       	<p>
-       	Das wird auch noch besser durchgestylt.<br />
-       	</p>
-       	<p>
-       	Grundfarben würde ich antrahzit/gelb nehmen.<br />
-       	</p>
-      </div>
-      <div id="audio">
-      	Playa
-      </div>
-      <div id="video">
-      	Youtube
+      <div id="homepage-wrapper">
+      	<div id="homepage" class="sw">
+	      	<h2>Poi blabla</h2>
+	      	<p>Lorem Ipsum fick dich in den Arsch. Ass Ass Bitch Hureeeeeee. Ich ficke dich beim Fußball, ich ficke dich beim Tennis, denn ich hab einen - Penis. Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem </p>
+	       	<p>Hier soll dann mal der Beschreibungtext rein<br />
+	       	Lorem Ipsum<br />
+	       	Dolor Et<br />
+	       	</p>
+	       	<p>
+	       	Ich werde Dir Punkte von Dresden zeigen, die Du nicht ablehnen kannst.<br />
+	       	</p>
+	       	<p>
+	       	Bart Bart Bart Bart<br />
+	       	Gandalf-/Weberstyle<br />
+	       	</p>
+	       	<p>
+	       	Das wird auch noch besser durchgestylt.<br />
+	       	</p>
+	       	<p>
+	       	Grundfarben würde ich antrahzit/gelb nehmen.<br />
+	       	</p>
+	      </div>
+	      <div id="logo">
+	      	<img src="css/images/200px-dresden_stadtwappen.svg.png" />
+	      </div>
       </div>
       <div class="clearfix"></div>
       <div id="gallery">
@@ -167,7 +166,7 @@
       <div class="clearfix"></div>
     </div>
     <footer>
-    <div id="additional-links"><a>Impressum</a> | <a>Contact</a> | <a>FAQ</a></div>
+    <div id="additional-links" class="sw"><a>Impressum</a> | <a>Contact</a> | <a>FAQ</a></div>
     </footer>
   </div>
   
