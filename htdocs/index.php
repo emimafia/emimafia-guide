@@ -209,7 +209,7 @@
       <div class="clearfix"></div>
     </div>
     <footer>
-    <div id="additional-links" class="sw"><a>Impressum</a> | <a>Contact</a></div>
+    <div id="additional-links" class="sw"><a href="static/impressum.html">Impressum</a> | <a href="static/contact.html">Contact</a></div>
     </footer>
   </div>
 </body>
