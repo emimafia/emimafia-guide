@@ -16,19 +16,18 @@
 	}
 ?>
 
+<?php
+	$mpdrei = '../../media/audio/' . $lowertitle . '/' . $lowertitle . '.mp3';
+	$ogg = '../../media/audio/' . $lowertitle . '/' . $lowertitle . '.ogg';
+	$ogv = '../../media/video/' . $lowertitle . '/' . $lowertitle . '.ogv';
+	if(is_file($mpdrei) && is_file($ogg) && is_file($ogv)) {
+?>
 <div id="description">
 	<h2>
 		<?php echo $title; ?>
 	</h2>
 	<?php echo $desc; ?>
 </div>
-
-<?php
-	/**
-	 * @TODO Maybe we should do some code cleaning after everything würgs
-	 */
-?>
-
 <div id="audio">
 	<audio controls>
 			<?php
@@ -37,9 +36,8 @@
 			?>
 	</audio>
 </div>
-
 <div id="video">
-	<video width="410" height="250" autobuffer controls>
+	<video width="410" autobuffer controls>
 	<?php // @TODO same thing here like audio!!!
 		echo '<source src="media/video/' . $lowertitle . '/' . $lowertitle . '.ogv" type="video/ogg"  >'; // Muss noch ausgebaut werden => Die Controls werden nicht angezeigt, Steuerung nur mit Rechtsklick möglich...
 	?>		
@@ -47,7 +45,21 @@
 </div>
 
 <div class="clearfix"></div>
+<?php
+	}
+	else {
+?>
+<div id="full-description">
+	<h2>
+		<?php echo $title; ?>
+	</h2>
+	<?php echo $desc; ?>
+</div>
+<?php
+	}
+?>
 
+<!-- Here starts the gallery -->
 <div id="gallery">
 	<div class="flexslider">
 		<ul class="slides">
@@ -64,7 +76,7 @@
 					    $tnname = $dir . '/tn_' . $file;
 							if(!is_file($tnname) && is_file($fname)==FALSE){					// Prüfen ob thumb existiert => Wenn nicht erzeugen!
 								//@TODO not needed at first. upload.php works now. and this perfectly!!!
-								thumbnailing($dir . '/' . $fname,$dir . $tnname,80,80,70); // @TODO He gets in it but the thumbnailing won't happen. Don't know if you can maybe add some return false for debugging?
+								thumbnailing($dir . '/' . $fname,$dir . $tnname,100,100,70); // @TODO He gets in it but the thumbnailing won't happen. Don't know if you can maybe add some return false for debugging?
 							}
 					    if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
 					    	echo '
