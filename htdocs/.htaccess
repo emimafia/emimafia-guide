@@ -5,8 +5,8 @@ RewriteEngine On
 RewriteRule ^([a-z]+)\/?$ index.php?c=$1&%{QUERY_STRING} [NC]
 ##RewriteRule (.*).html  index.php?c=$1&%{QUERY_STRING} [L]
 
-ErrorDocument 403 /403
-ErrorDocument 404 /404
+ErrorDocument 403 /static/403.html
+ErrorDocument 404 /static/404.html
 
 </IfModule>
 
