@@ -89,6 +89,13 @@ header #osm {
 }
 header #map {
 	height: 315px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none; 
+	user-select: none;
+}
+header #map #OpenLayers_Control_MaximizeDiv {
+	display: none;
 }
 header #osm a {
 	color: #FFDD57;
@@ -120,7 +127,7 @@ header #osm a {
 	width: 10px;
 	height: 16px;
 }
-#contrast-y {
+#contrast-y {user-select: none;
 	background: #FFFF00;
 }
 #contrast-c {
@@ -148,6 +155,30 @@ header #osm a {
 }
 #content #homepage-wrapper {
 	position: relative;
+}
+#content table thead {
+	background: #FFDD57;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+thead td {
+	border-bottom: 2px solid #000000;
+	padding: 5px;
+}
+tbody .odd {
+	background: #BBBBBB;
+}
+tbody .even {
+	background: #DDDDDD;
+}
+tbody tr:hover {
+	background: #FFDD57;
+}
+tbody tr td:first-child {
+	border-right: 1px solid #000000;
+}
+tbody td {
+	padding: 4px;
 }
 #content #logo {
 	min-height: 320px;
@@ -313,7 +344,7 @@ footer {
 	height: 20px;
 }
 footer #additional-links {
-	width: 200px;
+	width: 115px;
 	margin: 3px auto;
 }
 

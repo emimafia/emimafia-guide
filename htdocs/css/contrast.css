@@ -33,6 +33,28 @@ header {
 	border-right: 2px solid #FFDD57;
 	border-left: 2px solid #FFDD57;
 }
+#content table {
+	border: 1px solid #FFDD57;
+}
+#content table thead {
+	color: #000000;
+	background: #FFFF00;
+}
+thead td {
+	border-bottom: 2px solid #000000;
+}
+tbody .odd {
+	background: #555555;
+}
+tbody .even {
+	background: #333333;
+}
+tbody tr:hover {
+	background: #000000;
+}
+tbody tr td:first-child {
+	border-right: 1px solid #FFDD57;
+}
 #content #description {	
 	width: 498px;
 }
@@ -71,6 +93,7 @@ footer {
 	color: #FFFF00;
 	border: 2px solid #FFDD57;
 }
-#additional-links {
+footer #additional-links {
 	font-weight: bold;
+	width: 120px;
 }
