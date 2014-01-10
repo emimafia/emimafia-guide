@@ -1,3 +1,8 @@
+<?php 
+/**
+ * Let's try to convince Aptana, that this should be a php-file
+ */
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="de">
 <head>
@@ -73,7 +78,7 @@
 		<a href="scripts/templates/poi.php?p=5" class="ajax-link">Waldschlösschen Brücke</a>
 	</div>
 <!-- 	@TODO maybe '▶' is a better marker -->
-	<div id="nav-switch">=></div>
+	<div id="nav-switch">=&gt;</div>
 	</nav>
   <div id="wrapper">
     <header>
@@ -97,25 +102,63 @@
     <div id='content'>
       <div id="homepage-wrapper">
       	<div id="homepage" class="sw">
-	      	<h2>Poi blabla</h2>
-	      	<p>Lorem Ipsum fick dich in den Arsch. Ass Ass Bitch Hureeeeeee. Ich ficke dich beim Fußball, ich ficke dich beim Tennis, denn ich hab einen - Penis. Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem  Lorem Lorem lorem Lorem Lorem Lorem Lorek Lorem lorem </p>
-	       	<p>Hier soll dann mal der Beschreibungtext rein<br />
-	       	Lorem Ipsum<br />
-	       	Dolor Et<br />
+	      	<h2>Der Emimafia Guide</h2>
+	      	<br />
+	      	<p>
+	      		Dresden wird wegen seiner barocken Architektur, berühmten Bauwerken wie der Frauenkirche oder der Semperoper, als auch durch seine Lage das deutsche bzw. Elbflorenz genannt. Aber dies sind nicht alle Sehenswürdigkeiten in der Landeshauptstadt. Bei uns entdecken sie noch weitere Orte und und erleben Dresden aus einem anderen Blickwinkel. 
 	       	</p>
-	       	<p>
-	       	Ich werde Dir Punkte von Dresden zeigen, die Du nicht ablehnen kannst.<br />
-	       	</p>
-	       	<p>
-	       	Bart Bart Bart Bart<br />
-	       	Gandalf-/Weberstyle<br />
-	       	</p>
-	       	<p>
-	       	Das wird auch noch besser durchgestylt.<br />
-	       	</p>
-	       	<p>
-	       	Grundfarben würde ich antrahzit/gelb nehmen.<br />
-	       	</p>
+	       	<br />
+	       	<table cellspacing="0" cellpadding="0" border="0">
+	       		<thead>
+	       			<tr>
+	       				<td colspan="2">
+	       					Ein paar generelle Fakten über Dresden
+	       				</td>
+	       			</tr>
+	       		</thead>
+	       		<tbody>
+		       		<tr class="odd">
+		       			<td>
+		       				Bundesland
+		       			</td>
+		       			<td>
+		       				Sachsen
+		       			</td>
+		       		</tr>
+		       		<tr class="even">
+		       			<td>
+		       				Fläche
+		       			</td>
+		       			<td>
+		       				328,31 km²
+		       			</td>	       			
+		       		</tr>
+		       		<tr class="odd">
+		       			<td>
+		       				Höhe
+		       			</td>
+		       			<td>
+		       				112 m ü. NHN
+		       			</td>	       			
+		       		</tr>
+		       		<tr class="even">
+		       			<td>
+		       				Einwohner
+		       			</td>
+		       			<td>
+		       				525.105
+		       			</td>	       			
+		       		</tr>
+		       		<tr class="odd">
+		       			<td>
+		       				Bevölkerungsdichte
+		       			</td>
+		       			<td>
+		       				1599 Einwohner je km²
+		       			</td>	       			
+		       		</tr>
+		       	</tbody>
+	       	</table>
 	      </div>
 	      <div id="logo">
 	      	<img src="css/images/200px-dresden_stadtwappen.svg.png" />
@@ -151,25 +194,23 @@
 				        $tnname = $dir . '/' . $dir_arr_entry . '/tn_' . $file; 
 			        	if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
 			          	echo '
-			    <li>
-			    	<a href="' . $fname . '" data-lightbox="gallery"><img class="thumb" src="' . $tnname . '"  /></a>
-			    </li>';
+			   		<li>
+			    		<a href="' . $fname . '" data-lightbox="gallery"><img class="thumb" src="' . $tnname . '"  /></a>
+			   		</li>';
 			        	}
 			      	}
 			      	closedir($tmp);
 			  		}
 			      
 			    ?>
-			 	 </ul>
+					</ul>
 				</div>
       </div>
       <div class="clearfix"></div>
     </div>
     <footer>
-    <div id="additional-links" class="sw"><a>Impressum</a> | <a>Contact</a> | <a>FAQ</a></div>
+    <div id="additional-links" class="sw"><a>Impressum</a> | <a>Contact</a></div>
     </footer>
   </div>
-  
-  
 </body>
 </html>
