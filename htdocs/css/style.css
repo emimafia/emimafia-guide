@@ -34,6 +34,10 @@ h3 {
 a {
 	color: #666666;
 	text-decoration: none;
+	outline: none;
+}
+a:active {
+	outline: none;
 }
 p {
 	line-height: 1.5;
@@ -42,6 +46,11 @@ p {
 }
 ul {
 	list-style: none;
+}
+.vertical-helper {
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
 }
 .clearfix {
 	clear: both;
@@ -89,7 +98,7 @@ header #osm a {
 	background: #FFDD57;
 }
 #styleswitch {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	right: 0px;
 	background: #888888;
@@ -126,7 +135,34 @@ header #osm a {
  */
 #content {
 	background: #CCCCCC;
-	min-height: 500px;
+	position: relative;
+}
+#content #homepage {
+	float: left;
+	background: transparent;
+	width: 640px;
+	float: left;
+	padding: 10px;
+	border-right: 4px solid #FFDD57;
+	min-height: 320px;
+}
+#content #homepage-wrapper {
+	position: relative;
+}
+#content #logo {
+	min-height: 320px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 296px
+}
+#content #logo img {
+	left: 50%;
+  margin-left: -100px;
+  margin-top: -103px;
+  position: absolute;
+  top: 50%;
 }
 #content #description {
 	background: transparent;
@@ -135,6 +171,11 @@ header #osm a {
 	padding: 10px;
 	border-right: 4px solid #FFDD57;
 	min-height: 320px;
+}
+#content #full-description {
+	background: transparent;
+	padding: 10px;
+	min-height: 320px;	
 }
 #content #audio {
 	margin: 10px 13px 5px 13px;
@@ -154,18 +195,20 @@ header #osm a {
 #gallery {
 	border-top: 16px solid #FFDD57;
 	border-bottom: 1px solid #222222;
-	height: 120px;
+	height: 112px;
 	position: relative;
 }
 #gallery .flex-control-nav {
 	position: absolute;
-	top: -18px;
+	top: -15px;
 	left: 0;
 	text-align: center;
   width: 100%;
   height: 15px;
 }
 #gallery .flexslider {
+	border: #CCCCCC;
+	background: #CCCCCC;
 	border-radius: 0;
 	position: relative;
 	padding: 0 30px;
@@ -177,13 +220,17 @@ header #osm a {
 #gallery .flexslider:hover .flex-next {
 	right: 0;
 }
+.lb-details {
+	display: none;
+}
 .slides li a {
 	display: block;
 	width: 102px;
 	height: 102px;
-	margin: 5px auto;
+	margin: 0 auto;
+	padding: 5px 0;
 }
-.slides li a:hover {
+.slides li a:hover img {
 	box-shadow: 0 0 10px #000000;
 }
 #content .thumb {
@@ -199,9 +246,9 @@ header #osm a {
  */
 nav {
 	border-radius: 2px;
-	width: 130px;
+	width: 150px;
 	height: 100%;
-	left: -130px;
+	left: -150px;
 	background: #FFDD57;
 }
 #nav-inner {
@@ -234,10 +281,14 @@ nav a {
 	font-size: 1.2em;
 	display: inline-block;
 	font-weight: bold;
-	padding: 0 0 0 7px;
+	padding: 0;
+	border-left: 10px solid transparent;
 	height: 50px;
-	width: 100px;
+	width: 140px;
 	color: #222222;
+}
+nav a:hover {
+	text-shadow: 0 0 1px #222222;
 }
 
 /*
