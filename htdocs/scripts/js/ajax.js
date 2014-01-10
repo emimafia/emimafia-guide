@@ -11,6 +11,7 @@
 			
 			$('#content div').fadeOut('slow');
 			$('#content').animate({
+				minHeight: "0",
 				height: "0",
 				paddingTop: "0",
 				paddingBottom: "0"
@@ -27,12 +28,14 @@
 				$.get(link, function(data, success){
 					if(success == 'success'){
 						$('#content').animate({
+							minHeight: "500px",
 							height: "0",
 							paddingTop: "0",
 							paddingBottom: "0"
 						}, 'slow', function(){
 							$('#content section').remove();
 							$('#content').html(data);
+							$('#content').removeAttr('style');
 							$('.flexslider').flexslider( {
 								animation : "slide",
 								animationLoop : true,
