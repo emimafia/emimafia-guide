@@ -4,13 +4,24 @@
   $poi = $_GET['p'];
 	$query = "SELECT * FROM `POI` WHERE ID=\"$poi\"";
 	$result = mysql_query($query);
+	function normalize($str) {
+		$normalize_arr = array (
+			'ä' => 'ae',
+			'ö' => 'oe',
+			'ü' => 'ue',
+			'ß' => 'ss',
+			' ' => '',
+		);
+		$str = strtolower(strtr($str, $normalize_arr));
+		return $str;
+	}
 	if ($result == FALSE){
 		echo "Fehler bei der Abfrage!";
 	}
 	else {
 		while ($row = mysql_fetch_object($result)){
 			$title = $row -> Name;
-			$lowertitle = strtolower($title); //@TODO String to lower Bitches!!!
+			$lowertitle = normalize($title);
 			$desc = $row -> Desc;
 		}
 	}
@@ -19,10 +30,11 @@
 <?php
 	$mpdrei = '../../media/audio/' . $lowertitle . '/' . $lowertitle . '.mp3';
 	$ogg = '../../media/audio/' . $lowertitle . '/' . $lowertitle . '.ogg';
+	$mpvier = '../../media/video/' . $lowertitle . '/' . $lowertitle . '.mp4';
 	$ogv = '../../media/video/' . $lowertitle . '/' . $lowertitle . '.ogv';
-	if(is_file($mpdrei) && is_file($ogg) && is_file($ogv)) {
+	if(is_file($mpdrei) && is_file($ogg) && is_file($ogv) && is_file($mpvier)) {
 ?>
-<div id="description">
+<div id="description" class="sw">
 	<h2>
 		<?php echo $title; ?>
 	</h2>
@@ -49,7 +61,7 @@
 	}
 	else {
 ?>
-<div id="full-description">
+<div id="full-description" class="sw">
 	<h2>
 		<?php echo $title; ?>
 	</h2>
