@@ -65,7 +65,8 @@ tbody tr td:first-child {
 #captcha {
 	border: 1px solid #FFFFFF;
 }
-input {
+input,
+textarea {
 	background: #000000;
   color: #FFFF00;
   font-weight: bold;
