@@ -223,6 +223,21 @@ tbody td {
 	width: 410px;
 	float: left;
 }
+/**
+ * 	Contact
+ */
+.contactlabel {
+	width: 150px;
+}
+label{
+	float: left;
+	display: block;
+	width: 70px;
+	margin-left: 10px;
+}
+textarea {
+	resize: none;
+}
 #gallery {
 	border-top: 16px solid #FFDD57;
 	border-bottom: 1px solid #222222;
