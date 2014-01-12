@@ -62,6 +62,14 @@ tbody tr td:first-child {
 #content #video {
 	width: 405px;
 }
+#captcha {
+	border: 1px solid #FFFFFF;
+}
+input {
+	background: #000000;
+  color: #FFFF00;
+  font-weight: bold;
+}
 #gallery .flexslider {
 	background: #000000;
 }
