@@ -20,7 +20,7 @@ function addMarker(layer, lon, lat, popupContentHTML) {
     var ll = new OpenLayers.LonLat(Lon2Merc(lon), Lat2Merc(lat));
     var feature = new OpenLayers.Feature(layer, ll); 
     feature.closeBox = true;
-    feature.popupClass = OpenLayers.Class(OpenLayers.Popup.FramedCloud, {minSize: new OpenLayers.Size(30, 15) } );
+    feature.popupClass = OpenLayers.Class(OpenLayers.Popup.FramedCloud, {minSize: new OpenLayers.Size(175, 75) } );
     feature.data.popupContentHTML = popupContentHTML;
     feature.data.overflow = "hidden";
  
@@ -37,11 +37,20 @@ function addMarker(layer, lon, lat, popupContentHTML) {
         }
         OpenLayers.Event.stop(evt);
     };
+    
     marker.events.register("mousedown", feature, markerClick);
  
     layer.addMarker(marker);
-	map.addPopup(feature.createPopup(feature.closeBox));
-	
+		map.addPopup(feature.createPopup(feature.closeBox));
+		
+		/**
+		 * @TODO This is a dirty critical fix. Two of them still toggle but the other 3 won't. Needs Investigation!!!
+		 * @TODO It seems to depend on the size of the popup. Strange
+		 */
+		var poplist = document.getElementsByClassName("olPopup");
+			for (var i = 0; i < poplist.length; i++) {
+		  	poplist[i].style.display = 'none';
+			}
 }
  
 function getCycleTileURL(bounds) {

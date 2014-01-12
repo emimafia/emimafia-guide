@@ -16,9 +16,9 @@ function drawmap() {
     //  						V
     var popuptext="<a href=\"linkzumphpscript.php?irgendwas\"><font color=\"black\"><b>Dresden<br>Stadtmitte<br></b></font></a>";
     var textfraukirch="<a href=\"scripts/templates/poi.php?p=1\" class=\"ajax-link\"><font color=\"black\"><b>Frauenkirche<br></b></font></a>";
-    var textaltmarkt="<a href=\"scripts/templates/poi.php?p=4\" class=\"ajax-link\"><font color=\"black\"><b>Altmarkt<br></b></font></a>";
-    var textgrossgart="<a href=\"scripts/templates/poi.php?p=3\" class=\"ajax-link\"><font color=\"black\"><b>Großer Garten<br></b></font></a>";
     var textsemper="<a href=\"scripts/templates/poi.php?p=2\" class=\"ajax-link\"><font color=\"black\"><b>Semperoper</b></font></a>";
+    var textaltmarkt="<a href=\"scripts/templates/poi.php?p=3\" class=\"ajax-link\"><font color=\"black\"><b>Altmarkt<br></b></font></a>";
+    var textgrossgart="<a href=\"scripts/templates/poi.php?p=4\" class=\"ajax-link\"><font color=\"black\"><b>Großer Garten<br></b></font></a>";
     var textwaldschl="<a href=\"scripts/templates/poi.php?p=5\" class=\"ajax-link\"><font color=\"black\"><b>Waldschlößchenbrücke</b></font></a>";
 
     OpenLayers.Lang.setCode('de');
@@ -48,9 +48,9 @@ function drawmap() {
     	                                          visibility: true, displayInLayerSwitcher: false });
    
 
-	OpenLayers.Marker.defaultIcon = function () {
-    	return new OpenLayers.Icon ("css/images/marker.png", {w:20, h:30}, {x: -10, y:-30});
-	};
+	// OpenLayers.Marker.defaultIcon = function () {
+    	// return new OpenLayers.Icon ("css/images/marker.png", {w:20, h:30}, {x: -10, y:-30});
+	// };
 
     map.addLayers([layer_mapnik, layer_markers]);
     jumpTo(lon, lat, zoom);
