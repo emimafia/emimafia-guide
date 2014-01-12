@@ -48,7 +48,24 @@ function styleswitch(action) {
 				element.setAttribute("href", "css/include.css");				
 			}
 		break;
+		case 'contrast-landing':
+			if(element.getAttribute('href')=="../../css/include.css") {
+				element.removeAttribute("href");
+				element.setAttribute("href", "../../css/include_contrast.css");
+			}
+			else {
+				element.removeAttribute("href");
+				element.setAttribute("href", "../../css/include.css");				
+			}
+		break;
 		default:
 			alert('SHIT HAPPENS');
 	}
 }
+function newcapture() {
+  var now = new Date();
+  sek = now.getSeconds();
+  myimg = document.getElementById('captcha');
+  myimg.src = '../scripts/templates/capture.php?'+sek;
+  return
+} 
