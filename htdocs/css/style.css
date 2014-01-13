@@ -21,7 +21,7 @@ h1, h2, h3 {
 	font-weight: bold;
 }
 h1 {
-	font-size: 2em;
+	font-size: 2.3em;
 	margin: 0;
 }
 h2 {
@@ -77,12 +77,13 @@ nav {
  */
 header {
 	background: #FFFF77;
-	height: 355px;
+	height: 365px;
 	border-radius: 5px 5px 0 0;
 }
 header h1 {
 	text-align: center;
 	vertical-align: middle;
+	padding: 5px 0;
 }
 header #osm {
 	color: #FFDD57;
@@ -96,6 +97,14 @@ header #map {
 }
 header #map #OpenLayers_Control_MaximizeDiv {
 	display: none;
+}
+.olPopup a {
+	color: #000000;
+	font-weight: bold;
+	text-decoration: inherit;
+}
+.olPopup a:hover {
+	text-shadow: 0 0 1px #555555;
 }
 header #osm a {
 	color: #FFDD57;
@@ -190,8 +199,8 @@ tbody td {
 }
 #content #logo img {
 	left: 50%;
-  margin-left: -100px;
-  margin-top: -103px;
+  margin-left: -122px;
+  margin-top: -126px;
   position: absolute;
   top: 50%;
 }
