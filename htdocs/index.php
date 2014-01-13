@@ -1,8 +1,3 @@
-<?php 
-/**
- * Let's try to convince Aptana, that this should be a php-file
- */
-?>
 <!DOCTYPE html>
 <html class="no-js" lang="de">
 <head>
