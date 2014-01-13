@@ -161,7 +161,7 @@
 	       	</table>
 	      </div>
 	      <div id="logo">
-	      	<img src="css/images/200px-dresden_stadtwappen.svg.png" />
+	      	<img src="css/images/dresden_stadtwappen.svg" />
 	      </div>
       </div>
       <div class="clearfix"></div>
