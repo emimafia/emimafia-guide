@@ -20,7 +20,7 @@ function addMarker(layer, lon, lat, popupContentHTML) {
     var ll = new OpenLayers.LonLat(Lon2Merc(lon), Lat2Merc(lat));
     var feature = new OpenLayers.Feature(layer, ll); 
     feature.closeBox = true;
-    feature.popupClass = OpenLayers.Class(OpenLayers.Popup.FramedCloud, {minSize: new OpenLayers.Size(175, 75) } );
+    feature.popupClass = OpenLayers.Class(OpenLayers.Popup.FramedCloud, {minSize: new OpenLayers.Size(200, 75) } );
     feature.data.popupContentHTML = popupContentHTML;
     feature.data.overflow = "hidden";
  
@@ -28,6 +28,12 @@ function addMarker(layer, lon, lat, popupContentHTML) {
     marker.feature = feature;
  
     var markerClick = function(evt) {
+    	/**
+    	 * For Switching of the marker Images
+    	 */
+    	// OpenLayers.Marker.defaultIcon = function () {
+    		// return new OpenLayers.Icon ("css/images/marker_active.svg", {w:23, h:27}, {x: -10, y:-30});
+			// };
         if (this.popup == null) {
             this.popup = this.createPopup(this.closeBox);
             map.addPopup(this.popup);
