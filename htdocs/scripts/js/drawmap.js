@@ -14,13 +14,13 @@ function drawmap() {
     //  						|
     //  						|
     //  						V
-    var popuptext="<a href=\"linkzumphpscript.php?irgendwas\"><font color=\"black\"><b>Dresden<br>Stadtmitte<br></b></font></a>";
-    var textfraukirch="<a href=\"scripts/templates/poi.php?p=1\" class=\"ajax-link\"><font color=\"black\"><b>Frauenkirche<br></b></font></a>";
-    var textsemper="<a href=\"scripts/templates/poi.php?p=2\" class=\"ajax-link\"><font color=\"black\"><b>Semperoper</b></font></a>";
-    var textaltmarkt="<a href=\"scripts/templates/poi.php?p=3\" class=\"ajax-link\"><font color=\"black\"><b>Altmarkt<br></b></font></a>";
-    var textgrossgart="<a href=\"scripts/templates/poi.php?p=4\" class=\"ajax-link\"><font color=\"black\"><b>Großer Garten<br></b></font></a>";
-    var textwaldschl="<a href=\"scripts/templates/poi.php?p=5\" class=\"ajax-link\"><font color=\"black\"><b>Waldschlößchenbrücke</b></font></a>";
-    var textkreuzkirche="<a href=\"scripts/templates/poi.php?p=6\" class=\"ajax-link\"><font color=\"black\"><b>Kreuzkirche</b></font></a>";
+    var popuptext="<a href=\"linkzumphpscript.php?irgendwas\">Dresden<br>Stadtmitte =></a>";
+    var textfraukirch="<a href=\"scripts/templates/poi.php?p=1\" class=\"ajax-link\">Frauenkirche =></a>";
+    var textsemper="<a href=\"scripts/templates/poi.php?p=2\" class=\"ajax-link\">Semperoper =></a>";
+    var textaltmarkt="<a href=\"scripts/templates/poi.php?p=3\" class=\"ajax-link\">Altmarkt =></a>";
+    var textgrossgart="<a href=\"scripts/templates/poi.php?p=4\" class=\"ajax-link\">Großer Garten =></a>";
+    var textwaldschl="<a href=\"scripts/templates/poi.php?p=5\" class=\"ajax-link\">Waldschlößchenbrücke =></a>";
+    // var textkreuzkirche="<a href=\"scripts/templates/poi.php?p=6\" class=\"ajax-link\">Kreuzkirche =></a>";
 
     OpenLayers.Lang.setCode('de');
     
@@ -49,9 +49,9 @@ function drawmap() {
     	                                          visibility: true, displayInLayerSwitcher: false });
    
 
-	// OpenLayers.Marker.defaultIcon = function () {
-    	// return new OpenLayers.Icon ("css/images/marker.png", {w:20, h:30}, {x: -10, y:-30});
-	// };
+	OpenLayers.Marker.defaultIcon = function () {
+    	return new OpenLayers.Icon ("css/images/marker.svg", {w:23, h:27}, {x: -10, y:-30});
+	};
 
     map.addLayers([layer_mapnik, layer_markers]);
     jumpTo(lon, lat, zoom);
@@ -62,7 +62,7 @@ function drawmap() {
     addMarker(layer_markers, 13.763055555556, 51.0375, textgrossgart); //Großer Garten
     addMarker(layer_markers, 13.735169444444, 51.054508333333, textsemper); // Semperoper
     addMarker(layer_markers, 13.776983333333, 51.063969444444, textwaldschl); //Waldschlößchenbrücke
-    addMarker(layer_markers, 13.739361111111, 51.048777777778, textkreuzkirche); //Kreuzkirche
+    // addMarker(layer_markers, 13.739361111111, 51.048777777778, textkreuzkirche); //Kreuzkirche
 
 }
 
