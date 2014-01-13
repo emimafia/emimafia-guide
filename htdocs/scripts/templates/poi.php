@@ -54,7 +54,7 @@
 		echo '
 <div id="video">
 	<video width="410" autobuffer controls>
-		<source src="media/video/' . $lowertitle . '/' . $lowertitle . '.ogv" type="video/ogg"  > // Muss noch ausgebaut werden => Die Controls werden nicht angezeigt, Steuerung nur mit Rechtsklick möglich...
+		<source src="media/video/' . $lowertitle . '/' . $lowertitle . '.ogv" type="video/ogg"  >
 		<source src="media/video/' . $lowertitle . '/' . $lowertitle . '.mp4" type="video/mp4"  >	
 	</video>
 </div>';
@@ -95,6 +95,7 @@
 				else {
 					$tmp = opendir($dir);
 				  	while($file=readdir($tmp)){
+				  		if($file != '.' && $file != '..') {
 					  	$fname = $dir . '/' . $file;
 					    $tnname = $dir . '/tn_' . $file;
 							if(!is_file($tnname) && is_file($fname)==FALSE){					// Prüfen ob thumb existiert => Wenn nicht erzeugen!
@@ -108,6 +109,7 @@
 					    </li>';
 					        }
 					      }
+							}
 						closedir($tmp); 
 				}
 			?>
