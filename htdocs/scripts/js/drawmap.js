@@ -20,6 +20,7 @@ function drawmap() {
     var textaltmarkt="<a href=\"scripts/templates/poi.php?p=3\" class=\"ajax-link\"><font color=\"black\"><b>Altmarkt<br></b></font></a>";
     var textgrossgart="<a href=\"scripts/templates/poi.php?p=4\" class=\"ajax-link\"><font color=\"black\"><b>Großer Garten<br></b></font></a>";
     var textwaldschl="<a href=\"scripts/templates/poi.php?p=5\" class=\"ajax-link\"><font color=\"black\"><b>Waldschlößchenbrücke</b></font></a>";
+    var textkreuzkirche="<a href=\"scripts/templates/poi.php?p=6\" class=\"ajax-link\"><font color=\"black\"><b>Kreuzkirche</b></font></a>";
 
     OpenLayers.Lang.setCode('de');
     
@@ -61,6 +62,7 @@ function drawmap() {
     addMarker(layer_markers, 13.763055555556, 51.0375, textgrossgart); //Großer Garten
     addMarker(layer_markers, 13.735169444444, 51.054508333333, textsemper); // Semperoper
     addMarker(layer_markers, 13.776983333333, 51.063969444444, textwaldschl); //Waldschlößchenbrücke
+    addMarker(layer_markers, 13.739361111111, 51.048777777778, textkreuzkirche); //Kreuzkirche
 
 }
 
