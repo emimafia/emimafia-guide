@@ -43,7 +43,7 @@
 								minItems : 2,
 								maxItems : 8,
 								controlsContainer : '.flex-container' 
-  });
+  						});
 						});
 					}
 				}).error(function(){
