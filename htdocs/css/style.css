@@ -114,6 +114,10 @@ header #osm a {
 	height: 20px;
 	background: #FFDD57;
 }
+
+/**
+ * 	Styleswitch
+ */
 #styleswitch {
 	position: fixed;
 	top: 0px;
@@ -247,6 +251,9 @@ label{
 textarea {
 	resize: none;
 }
+/**
+ * 	Gallery
+ */
 #gallery {
 	border-top: 16px solid #FFDD57;
 	height: 112px;

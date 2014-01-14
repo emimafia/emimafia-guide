@@ -1,3 +1,6 @@
+/**
+ * map position
+ */
 function jumpTo(lon, lat, zoom) {
     var x = Lon2Merc(lon);
     var y = Lat2Merc(lat);
@@ -44,6 +47,9 @@ function addMarker(layer, lon, lat, popupContentHTML) {
         OpenLayers.Event.stop(evt);
     };
     
+	/**
+	 * marker function
+	 */
     marker.events.register("mousedown", feature, markerClick);
  
     layer.addMarker(marker);
