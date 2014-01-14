@@ -47,17 +47,17 @@ if(isset($_GET["delfile"]) && !empty($_GET['delfile']) && base64_decode($_GET['c
     unlink($dir . '/tn_' . $_GET["delfile"]);
   } 
   
-    echo '<script>top.location.href="./upload.html"</script>';
+    echo '<script>top.location.href="./upload.php"</script>';
 }
 
 ?>
     <p>
       <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post" enctype="multipart/form-data">
-      <label class="adminlabel" for="upload">
-        Bild ausw&auml;hlen: 
-      </label>
-      <input id="upload" name="upload" type="file" accept="image/*" />
-      <input type="submit" value="Datei hochladen" />
+	      <label class="adminlabel" for="upload">
+	        Bild ausw&auml;hlen: 
+	      </label>
+      	<input id="upload" name="upload" type="file" accept="image/*" />
+      	<input type="submit" value="Datei hochladen" />
       </form>
     </p> 
     <table>
@@ -89,4 +89,3 @@ if(isset($_GET["delfile"]) && !empty($_GET['delfile']) && base64_decode($_GET['c
       closedir($tmp);
     ?>
     </table>
-  </p>
