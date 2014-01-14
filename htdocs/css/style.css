@@ -249,7 +249,6 @@ textarea {
 }
 #gallery {
 	border-top: 16px solid #FFDD57;
-	border-bottom: 1px solid #222222;
 	height: 112px;
 	position: relative;
 }
@@ -295,6 +294,13 @@ textarea {
 	background: #333333;
 	padding: 1px;
 	border-radius: 3px;
+}
+#faq {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -200px;
 }
 /**
  * 	Navigation
@@ -366,9 +372,10 @@ footer {
 	padding: 5px 10px;
 	border-radius: 0 0 5px 5px;
 	height: 20px;
+	border-top: 1px solid #222222;
 }
 footer #additional-links {
-	width: 135px;
+	width: 170px;
 	margin: 3px auto;
 }
 

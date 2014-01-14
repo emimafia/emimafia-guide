@@ -111,7 +111,7 @@
     	?>
     </div>
     <footer>
-    <div id="additional-links" class="sw"><a href="static/impressum.html" class="ajax-link">Impressum</a> | <a href="static/contact.php" class="ajax-link">Contact</a></div>
+    <div id="additional-links" class="sw"><a href="static/impressum.html" class="ajax-link">Impressum</a> | <a href="static/contact.php" class="ajax-link">Contact</a> | <a href="static/faq.html" class="ajax-link">FAQ</a></div>
     </footer>
   </div>
 </body>
