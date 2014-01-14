@@ -26,10 +26,11 @@ h1 {
 }
 h2 {
 	font-size: 1.8em;
-	margin: 5px 0;
+	margin: 15px 0;
 }
 h3 {
 	font-size: 1.5em;
+	margin: 10px 0;
 }
 a {
 	color: #666666;
@@ -210,12 +211,12 @@ tbody td {
 	float: left;
 	padding: 10px;
 	border-right: 4px solid #FFDD57;
-	min-height: 320px;
+	min-height: 350px;
 }
 #content #full-description {
 	background: transparent;
 	padding: 10px;
-	min-height: 320px;	
+	min-height: 350px;	
 }
 #content #audio {
 	margin: 10px 13px 5px 13px;
@@ -227,7 +228,6 @@ tbody td {
 	width: 100%;
 }
 #content #video {
-	color: #FFFFFF;
 	margin:  5px 13px 10px 13px;
 	width: 410px;
 	float: left;

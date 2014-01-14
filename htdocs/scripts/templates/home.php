@@ -1,7 +1,6 @@
 <div id="homepage-wrapper">
 	<div id="homepage" class="sw">
 	<h2>Der Emimafia Guide</h2>
-	<br />
 	<p>
 		Dresden wird wegen seiner barocken Architektur, berühmten Bauwerken wie der Frauenkirche oder der Semperoper, als auch durch seine Lage das deutsche bzw. Elbflorenz genannt. Aber dies sind nicht alle Sehenswürdigkeiten in der Landeshauptstadt. Bei uns entdecken sie noch weitere Orte und und erleben Dresden aus einem anderen Blickwinkel. 
 	</p>
