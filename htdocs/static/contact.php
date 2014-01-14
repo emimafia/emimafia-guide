@@ -124,7 +124,7 @@ if(isset($_POST) && count($_POST)>0) {
 	      <p>
 	      <label class="contactlabel">Sicherheitscode</label>
 	      <img id="captcha" src="../scripts/templates/capture.php" />
-	      <a onclick="newcapture()" href="#">
+	      <a class="nohref" onclick="newcapture()">
 	        Refresh
 	      </a>
 	      </p>
