@@ -28,7 +28,7 @@ function styleswitch(action) {
 		  	list[i].style.fontWeight = "bold";
 			}
 			document.getElementsByTagName('footer')[0].style.height = "30px";
-			document.getElementById("additional-links").style.width = "200px";
+			document.getElementById("additional-links").style.width = "240px";
 		break;
 		case 'minus':
 			var list = document.getElementsByClassName("sw");
