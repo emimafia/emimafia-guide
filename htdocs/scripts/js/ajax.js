@@ -28,7 +28,7 @@
 				$.get(link, function(data, success){
 					if(success == 'success'){
 						$('#content').animate({
-							minHeight: "500px",
+							minHeight: "350px",
 							height: "0",
 							paddingTop: "0",
 							paddingBottom: "0"
