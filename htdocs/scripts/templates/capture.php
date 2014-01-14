@@ -11,7 +11,7 @@
     $char = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
     $ranchar = substr($char,mt_rand(0,62),1);
     $txtcol = imagecolorallocate($handle,mt_rand(50,255),mt_rand(50,255),mt_rand(50,255));
-    imagettftext($handle,mt_rand(12,20),mt_rand(-50,50),$i*20,mt_rand(20,50),$txtcol,'../../css/fonts/aaargh.ttf',$ranchar);
+    imagettftext($handle,mt_rand(12,20),mt_rand(-50,50),$i*20,mt_rand(20,50),$txtcol,'./aaargh.ttf',$ranchar);
     $_SESSION['captchacode'] .= $ranchar;
   }
   for( $i=0; $i<$random_dots; $i++ ) {
