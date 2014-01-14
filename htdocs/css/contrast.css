@@ -55,6 +55,9 @@ tbody tr:hover {
 tbody tr td:first-child {
 	border-right: 1px solid #FFDD57;
 }
+#faq {
+	box-shadow: 0 0 5px #FFFFFF;
+}
 #content #description {	
 	width: 498px;
 }
