@@ -90,7 +90,7 @@ if(isset($_POST) && count($_POST)>0) {
 	}
 }
 ?>
-		<div id="full-description">
+		<div id="full-description" class="sw">
   		<h2>Contact</h2>
       <form action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post">
 	      <p>
