@@ -1,7 +1,7 @@
 <?php
 	require_once('connect.php');
 	mysql_query('set names utf8');
-  $poi = $_GET['p'];
+    $poi = $_GET['p'];
 	$query = "SELECT * FROM `POI` WHERE ID=\"$poi\"";
 	$result = mysql_query($query);
 	function normalize($str) {
@@ -23,6 +23,8 @@
 			$title = $row -> Name;
 			$lowertitle = normalize($title);
 			$desc = $row -> Desc;
+			$audiotitle = $row -> AudioTitle;
+			$videotitle = $row -> VideoTitle;
 		}
 	}
 ?>
@@ -44,6 +46,7 @@
 	if (is_file($mpdrei) && is_file($ogg)) {
 		echo '
 <div id="audio">
+	<h3>' . $audiotitle . '</h3>
 	<audio controls>
 		<source src="media/audio/' . $lowertitle . '/' . $lowertitle . '.mp3" type="audio/mpeg" controls>
 		<source src="media/audio/' . $lowertitle . '/' . $lowertitle . '.ogg" type="audio/ogg" controls>
@@ -53,6 +56,7 @@
 	if (is_file($ogv) && is_file($mpvier)) {
 		echo '
 <div id="video">
+	<h3>' . $videotitle . ' </h3>
 	<video width="410" autobuffer controls>
 		<source src="media/video/' . $lowertitle . '/' . $lowertitle . '.ogv" type="video/ogg"  >
 		<source src="media/video/' . $lowertitle . '/' . $lowertitle . '.mp4" type="video/mp4"  >	

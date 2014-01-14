@@ -65,7 +65,7 @@
 	<nav>
 	<div id="nav-inner">
 		<h3>Navigation</h3>
-		<a href="/">Home</a>
+		<a href="scripts/templates/home.php" class="ajax-link">Home</a>
 		<a href="scripts/templates/poi.php?p=1" class="ajax-link">Frauenkirche</a>
 		<a href="scripts/templates/poi.php?p=2" class="ajax-link">Semperoper</a>
 		<a href="scripts/templates/poi.php?p=3" class="ajax-link">Altmarkt</a>
@@ -204,7 +204,7 @@
       <div class="clearfix"></div>
     </div>
     <footer>
-    <div id="additional-links" class="sw"><a href="static/impressum.html">Impressum</a> | <a href="static/contact.php">Contact</a></div>
+    <div id="additional-links" class="sw"><a href="static/impressum.html" class="ajax-link">Impressum</a> | <a href="static/contact.php" class="ajax-link">Contact</a></div>
     </footer>
   </div>
 </body>
