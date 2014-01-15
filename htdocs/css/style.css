@@ -351,6 +351,8 @@ nav {
 	position: absolute;
 	top: 60px;
 	right: -140px;
+	text-align: center;
+	width: 130px;
 }
 nav:hover {
 	left: 0;
