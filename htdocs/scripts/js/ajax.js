@@ -14,6 +14,10 @@
 		$('a.ajax-nonpoi').click(function(){
 			link = $(this).attr('href');	
 			$('#content div').fadeOut('slow');
+  		$('.olPopup').css('display', 'none');
+  		for (var i = 1; i < marker.length; i++) {
+		  	$('#OL_Icon_' + marker[i] + '_innerImage').attr('src','css/images/marker.svg');
+			}
 			$('#content').animate({
 				minHeight: "0",
 				height: "0",
@@ -41,10 +45,6 @@
 							$('#content').html(data);
 							$('#content').removeAttr('style');
   						jumpTo(lon, lat, zoom);
-  						$('.olPopup').css('display', 'none');
-  						for (var i = 1; i < marker.length; i++) {
-		  					$('#OL_Icon_' + marker[i] + '_innerImage').attr('src','css/images/marker.svg');
-							}
 							$('.flexslider').flexslider({
 								animation : "slide",
 								animationLoop : true,
@@ -65,6 +65,12 @@
 			link = $(this).attr('href');
 			p = link.substr(link.length-1 ,link.length);
 			$('#content div').fadeOut('slow');
+  		$('.olPopup').css('display', 'none');
+  		for (var i = 1; i < marker.length; i++) {
+		  	$('#OL_Icon_' + marker[i] + '_innerImage').attr('src','css/images/marker.svg');
+			}
+			$('#OpenLayers_Feature_' + popup[p] + '_popup').css('display','block');
+			$('#OL_Icon_' + marker[p] + '_innerImage').attr('src','css/images/marker_active.svg');
 			$('#content').animate({
 				minHeight: "0",
 				height: "0",
@@ -91,12 +97,6 @@
 							$('#content section').remove();
 							$('#content').html(data);
 							$('#content').removeAttr('style');
-  						$('.olPopup').css('display', 'none');
-  						for (var i = 1; i < marker.length; i++) {
-		  					$('#OL_Icon_' + marker[i] + '_innerImage').attr('src','css/images/marker.svg');
-							}
-							$('#OpenLayers_Feature_' + popup[p] + '_popup').css('display','block');
-							$('#OL_Icon_' + marker[p] + '_innerImage').attr('src','css/images/marker_active.svg');
 							$('.flexslider').flexslider({
 								animation : "slide",
 								animationLoop : true,
