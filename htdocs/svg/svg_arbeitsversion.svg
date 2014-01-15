@@ -1313,40 +1313,40 @@
          id="flowPara4461"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Verdana;-inkscape-font-specification:Verdana Bold">Zwinger</flowPara></flowRoot>  </g>
 	<g>
-  	<a xlink:href="javascript:dynEvent('frauenkirche')">
+  	
   		<use xlink:href="#mark_1" id="frauenkirche" onclick="dynEvent('frauenkirche')" transform="translate(615, 295)" fill="red"/>
   		<text x="640" y="300" style="font-size:20px;line-height:125%;font-family:Verdana;">
   				Frauenkirche
   		</text>
-  	</a>
   	
-  	<a xlink:href="">
+  	
+  	
   		<use xlink:href="#mark_1" id="altmarkt" onclick="dynEvent('altmarkt')" transform="translate(565, 360)" fill="red"/>
   		<text x="585" y="365" style="font-size:20px;line-height:125%;font-family:Verdana;">
   			Altmarkt
   		</text>
-  	</a>
+  
   	
-  	<a xlink:href="">
+  
   		<use xlink:href="#mark_1" id="grossgarten" onclick="dynEvent('grossgarten')" transform="translate(979, 644)" fill="red"/>
   		<text x="1000" y="655" style="font-size:20px;line-height:125%;font-family:Verdana;">
   			Großer Garten
   		</text>
-  	</a>
+
   	
-  	<a xlink:href="">
+ 
   		<use xlink:href="#mark_1" id="waldschlbr" onclick="dynEvent('waldschlbr')" transform="translate(1225, 30)" fill="red"/>
   		<text x="1115" y="60" style="font-size:20px;line-height:125%;font-family:Verdana;">
   			Waldschlößchenbrücke
   		</text>
-  	</a>
+
   	
-  	<a xlink:href="">
-  		<use xlink:href="#mark_1" id="semperoper" onclick="dynEvent('waldschlbr')" transform="translate(515, 230)" fill="red"/>
+
+  		<use xlink:href="#mark_1" id="semperoper" onclick="dynEvent('semperoper')" transform="translate(515, 230)" fill="red"/>
   		<text x="375" y="237" style="font-size:20px;line-height:125%;font-family:Verdana;">
   			Semperoper
   		</text>
-  	</a>
+  
   </g>
 	</g>
 	<g id="navigation">

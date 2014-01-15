@@ -94,7 +94,7 @@ function setupHandlers(root){
 		"onmouseup" : "handleMouseUp(evt)",
 		"onmousedown" : "handleMouseDown(evt)",
 		"onmousemove" : "handleMouseMove(evt)",
-		"onmouseout" : "handleMouseUp(evt)", // Decomment this to stop the pan functionality when dragging out of the SVG element
+		//"onmouseout" : "handleMouseUp(evt)", // Decomment this to stop the pan functionality when dragging out of the SVG element
 	});
 
 	if(navigator.userAgent.toLowerCase().indexOf('webkit') >= 0)
@@ -361,7 +361,8 @@ function dynEvent(id) {
 
 function aendFarb(id) {
 	resetFarbe();
-	kreis = document.getElementById(id);
+	var kreis = document.getElementById(id);
+	kreis.removeAttribute("fill");
 	kreis.setAttribute("fill", "yellow");
 	return;
 	
@@ -375,7 +376,11 @@ function resetFarbe() {
 	kreis[3] = document.getElementById("semperoper");
 	kreis[4] = document.getElementById("waldschlbr");
 	
-	kreis.setAttribute("fill", "red");
+	var i=0;
+	
+	while(i<=4){
+	kreis[i].setAttribute("fill", "red");
+	i++;}
 	
 }
 
