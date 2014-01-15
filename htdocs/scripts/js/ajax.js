@@ -12,8 +12,7 @@
 	$(document).ready(function(){
 		drawmap();
 		$('a.ajax-nonpoi').click(function(){
-			link = $(this).attr('href');
-			p = link.substr(link.length-1 ,link.length);	
+			link = $(this).attr('href');	
 			$('#content div').fadeOut('slow');
 			$('#content').animate({
 				minHeight: "0",
@@ -61,7 +60,7 @@
 		});
 		$('a.ajax-link').click(function(){
 			link = $(this).attr('href');
-			
+			p = link.substr(link.length-1 ,link.length);
 			$('#content div').fadeOut('slow');
 			$('#content').animate({
 				minHeight: "0",
