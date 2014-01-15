@@ -1,7 +1,7 @@
 <?php
 	require_once('connect.php');
 	mysql_query('set names utf8');
-    $poi = $_GET['p'];
+   $poi = $_GET['p'];
 	$query = "SELECT * FROM `POI` WHERE ID=\"$poi\"";
 	$result = mysql_query($query);
 	function normalize($str) {

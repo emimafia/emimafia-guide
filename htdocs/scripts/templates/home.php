@@ -1,11 +1,3 @@
-<script src="mapscr.js">
-
-var lon = 13.73836112;
-var lat = 51.059259;
-var zoom = 13; 
-jumpTo(lon,lat,zoom);
-
-</script>
 <div id="homepage-wrapper">
 	<div id="homepage" class="sw">
 	<h2>Der Emimafia Guide</h2>
