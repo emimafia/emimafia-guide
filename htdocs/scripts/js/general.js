@@ -21,6 +21,9 @@ $(window).load(function() {
 function styleswitch(action) {
 	element = document.getElementById("style");
 	switch(action) {
+		/**
+ 		 * size regulation
+		 */
 		case 'plus':
 			var list = document.getElementsByClassName("sw");
 			for (var i = 0; i < list.length; i++) {
@@ -38,6 +41,9 @@ function styleswitch(action) {
 			document.getElementsByTagName('footer')[0].removeAttribute('style');
 			document.getElementById("additional-links").removeAttribute('style');
 		break;
+		/**
+ 		 * color changer
+		 */
 		case 'contrast':
 			if(element.getAttribute('href')=="css/include.css") {
 				element.removeAttribute("href");
