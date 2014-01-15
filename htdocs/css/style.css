@@ -342,7 +342,7 @@ nav {
 	height: 100%;
 }
 #nav-switch {
-	background: #888888;
+	background: #ffdd57;
 	color: #333333;
 	font-size: 40px;
 	padding: 15px;
@@ -350,7 +350,7 @@ nav {
 	font-weight: bold;
 	position: absolute;
 	top: 60px;
-	right: -70px;
+	right: -140px;
 }
 nav:hover {
 	left: 0;

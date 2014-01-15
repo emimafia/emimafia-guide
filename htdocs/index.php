@@ -73,7 +73,7 @@
 		<a href="scripts/templates/poi.php?p=5" class="ajax-link">Waldschlösschen Brücke</a>
 	</div>
 <!-- 	@TODO maybe '▶' is a better marker -->
-	<div id="nav-switch">=&gt;</div>
+	<div id="nav-switch">Menü</div>
 	</nav>
   <div id="wrapper">
     <header>
