@@ -86,6 +86,9 @@ header h1 {
 	vertical-align: middle;
 	padding: 5px 0;
 }
+header a {
+	color: #000000;
+}
 header #osm {
 	color: #FFDD57;
 }
