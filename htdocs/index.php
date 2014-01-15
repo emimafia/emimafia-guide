@@ -65,7 +65,7 @@
 	<nav>
 	<div id="nav-inner">
 		<h3>Navigation</h3>
-		<a href="scripts/templates/home.php" class="ajax-link">Home</a>
+		<a href="scripts/templates/home.php" class="ajax-nonpoi">Home</a>
 		<a href="scripts/templates/poi.php?p=1" class="ajax-link">Frauenkirche</a>
 		<a href="scripts/templates/poi.php?p=2" class="ajax-link">Semperoper</a>
 		<a href="scripts/templates/poi.php?p=3" class="ajax-link">Altmarkt</a>
@@ -77,7 +77,7 @@
 	</nav>
   <div id="wrapper">
     <header>
-      <a href="scripts/templates/home.php" class="ajax-link"><h1>Emimafia Dresden Guide</h1></a>
+      <a href="scripts/templates/home.php" class="ajax-nonpoi"><h1>Emimafia Dresden Guide</h1></a>
       <div id="styleswitch">
 	      <div class="stylebuttons" onclick="styleswitch('plus')">+</div>
 	      <div class="stylebuttons" onclick="styleswitch('minus')">-</div>
@@ -111,7 +111,7 @@
     	?>
     </div>
     <footer>
-    <div id="additional-links" class="sw"><a href="static/impressum.html" class="ajax-link">Impressum</a> | <a href="static/contact.php" class="ajax-link">Contact</a> | <a href="static/faq.html" class="ajax-link">FAQ</a></div>
+    <div id="additional-links" class="sw"><a href="static/impressum.html" class="ajax-nonpoi">Impressum</a> | <a href="static/contact.php" class="ajax-nonpoi">Contact</a> | <a href="static/faq.html" class="ajax-nonpoi">FAQ</a></div>
     </footer>
   </div>
 </body>

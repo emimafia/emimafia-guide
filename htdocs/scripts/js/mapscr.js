@@ -54,9 +54,9 @@ function addMarker(layer, lon, lat, popupContentHTML) {
 		 * @TODO It seems to depend on the size of the popup. Strange
 		 */
 		var poplist = document.getElementsByClassName("olPopup");
-			for (var i = 0; i < poplist.length; i++) {
-		  	poplist[i].style.display = 'none';
-			}
+		for (var i = 0; i < poplist.length; i++) {
+		  poplist[i].style.display = 'none';
+		}
 }
  
 function getCycleTileURL(bounds) {
