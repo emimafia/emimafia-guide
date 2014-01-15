@@ -26,7 +26,7 @@ function drawmap() {
     
     // Position und Zoomstufe der Karte
     var lon = 13.73836112;
-    var lat = 51.059259;
+    var lat = 51.052259;
     var zoom = 13; 
 
     map = new OpenLayers.Map('map', {
@@ -50,7 +50,7 @@ function drawmap() {
    
 
 	OpenLayers.Marker.defaultIcon = function () {
-    	return new OpenLayers.Icon ("css/images/marker.svg", {w:23, h:27}, {x: -10, y:-30});
+    	return new OpenLayers.Icon ("css/images/marker.svg", {w:25, h:30}, {x: -10, y:-30});
 	};
 
     map.addLayers([layer_mapnik, layer_markers]);

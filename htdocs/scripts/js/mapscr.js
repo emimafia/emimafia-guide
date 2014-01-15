@@ -23,7 +23,7 @@ function addMarker(layer, lon, lat, popupContentHTML) {
     var ll = new OpenLayers.LonLat(Lon2Merc(lon), Lat2Merc(lat));
     var feature = new OpenLayers.Feature(layer, ll); 
     feature.closeBox = true;
-    feature.popupClass = OpenLayers.Class(OpenLayers.Popup.FramedCloud, {minSize: new OpenLayers.Size(200, 75) } );
+    feature.popupClass = OpenLayers.Class(OpenLayers.Popup.FramedCloud, {minSize: new OpenLayers.Size(220, 75) } );
     feature.data.popupContentHTML = popupContentHTML;
     feature.data.overflow = "hidden";
  
