@@ -66,37 +66,37 @@
 	<div class="flexslider">
 		<ul class="slides">
 			<?php
-				($isinclude === TRUE) ? $dir = 'media/images' : $dir = '../../media/images';
-				if(!is_dir($dir)){
-					mkdir($dir,0755);
+				($isinclude === TRUE) ? $dir = 'media/images' : $dir = '../../media/images'; //include query 
+				if(!is_dir($dir)){ //check if folder exists
+					mkdir($dir,0755); //create folder
 				}
-				$tmp = opendir($dir);
-				while($file=readdir($tmp)) {
-					if($file != '.' && $file != '..') {
-						$dir_arr[] .= $file;
+				$tmp = opendir($dir); //open folder
+				while($file=readdir($tmp)) { //read file from $tmp
+					if($file != '.' && $file != '..') { //sortiert Verweis auf Ordner (.) und übergeordnetern Ordner (..) aus
+						$dir_arr[] .= $file; //$dir-arr wird um $file erweitert (Datei aus geöffneten Ordner)
 					}
 				}
-				closedir($tmp);
-				foreach($dir_arr as &$dir_arr_entry) {
+				closedir($tmp); //close folder
+				foreach($dir_arr as &$dir_arr_entry) { //for each entry from $dir_arr go through the loop, here is the entry $dir_arr_entry 
 					$link = array (
 						'frauenkirche' => '1',
 						'semperoper' => '2',
 						'altmarkt' => '3',
 						'grossergarten' => '4',
 						'waldschloesschenbruecke' => '5',
-					);
-					$tmp = opendir($dir . '/' . $dir_arr_entry);
-					while($file=readdir($tmp)){
-						$fname = $dir . '/' . $dir_arr_entry . '/' . $file;
+					); //create a new Arraystructure with the assignment frauenkrche => 1 , ...
+					$tmp = opendir($dir . '/' . $dir_arr_entry); //open folder dir/dir_arr_entry
+					while($file=readdir($tmp)){ //so long that he can not find any other files
+						$fname = $dir . '/' . $dir_arr_entry . '/' . $file; //define folder structure
 						$tnname = $dir . '/' . $dir_arr_entry . '/tn_' . $file; 
-						if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
+						if(is_file($fname) && strpos($fname,'tn_')=== FALSE){ //sort files with tn out
 							echo '
 			<li>
 				<a href="' . $fname . '" data-lightbox="gallery"><img class="thumb" src="' . $tnname . '"  /></a>
-			</li>';
+			</li>'; //show the html code with the variable fname and tnname
 						}
 					}
-					closedir($tmp);
+					closedir($tmp); //close the folder
 				}    
 			?>
 		</ul>
