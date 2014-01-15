@@ -24,7 +24,8 @@
 	<meta name="DC.Description" content="Ein virtueller Stadtführer für die sächsische Landeshauptstadt Dresden. Gezeigt werden verschiedene Sehenswürdigkeiten und unterschiedlciher medialer Darstellung. ">
 	<meta name="DC.Language" content="de">
   <meta name="viewport" content="width=device-width; initial-scale=1.0" />
-
+	
+	<!-- Favicon -->
   <link rel="shortcut icon" href="css/images/favicon.ico" />
   
   <!-- Stylesheets -->
@@ -57,7 +58,6 @@
 <script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
 <script type="text/javascript" src="http://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
 <script type="text/javascript" src="scripts/js/mapscr.js"></script>
-
 
 </head>
 
@@ -105,7 +105,10 @@
     </header>
     <div id="subheader"></div>
     <div id='content'>
-    	<?php 
+    	<?php
+    	/**
+			 * Home Include for index
+			 */
     	$isinclude = TRUE;
     	include 'scripts/templates/home.php';
     	?>

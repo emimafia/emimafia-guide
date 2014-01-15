@@ -3,14 +3,23 @@
  * Our genius idea for ajaxing ^^
  */
 	var loading ='<section class="loading"><img src="css/images/ajax-loader.gif" alt="Ajax Loader">Bitte warten, die Inhalte werden geladen...</section>';
+  /**
+   * Location for Mapreset
+   */
   var lon = 13.73836112;
   var lat = 51.052259;
   var zoom = 13;
+  /**
+   * Arrays for Active Markers
+   */
   var marker = new Array('0','73','94','80','87','101');
   var popup = new Array('0','72','93','79','86','100');
 
 	$(document).ready(function(){
 		drawmap();
+		/**
+		 * Function for Non-POI Links
+		 */
 		$('a.ajax-nonpoi').click(function(){
 			link = $(this).attr('href');	
 			$('#content div').fadeOut('slow');
@@ -61,6 +70,9 @@
 			});
 			return false;
 		});
+		/**
+		 * Function for POI-Links
+		 */
 		$('a.ajax-link').click(function(){
 			link = $(this).attr('href');
 			p = link.substr(link.length-1 ,link.length);
@@ -114,7 +126,3 @@
 			return false;
 		});
 	});
-	/**
-	 * var poi = 73;
-$('#OL_Icon_' + poi + '_innerImage').attr('src','css/images/marker_active.svg')
-	 */

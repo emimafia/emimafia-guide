@@ -1,4 +1,7 @@
 <?php
+/**
+ * Contact Form Processing
+ */
 if(isset($_POST) && count($_POST)>0) {
 	$fehler = 0;
 	$fehlerstyle = 'style="color:#FF1F00;"';
