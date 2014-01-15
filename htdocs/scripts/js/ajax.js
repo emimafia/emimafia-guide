@@ -42,7 +42,9 @@
 							$('#content').removeAttr('style');
   						jumpTo(lon, lat, zoom);
   						$('.olPopup').css('display', 'none');
-  						$('.olAlphaImg').attr('src','css/images/marker.svg');
+  						for (var i = 1; i < marker.length; i++) {
+		  					$('#OL_Icon_' + marker[i] + '_innerImage').attr('src','css/images/marker.svg');
+							}
 							$('.flexslider').flexslider({
 								animation : "slide",
 								animationLoop : true,
@@ -90,7 +92,9 @@
 							$('#content').html(data);
 							$('#content').removeAttr('style');
   						$('.olPopup').css('display', 'none');
-  						$('.olAlphaImg').attr('src','css/images/marker.svg');
+  						for (var i = 1; i < marker.length; i++) {
+		  					$('#OL_Icon_' + marker[i] + '_innerImage').attr('src','css/images/marker.svg');
+							}
 							$('#OpenLayers_Feature_' + popup[p] + '_popup').css('display','block');
 							$('#OL_Icon_' + marker[p] + '_innerImage').attr('src','css/images/marker_active.svg');
 							$('.flexslider').flexslider({
