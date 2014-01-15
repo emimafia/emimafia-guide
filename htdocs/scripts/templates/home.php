@@ -1,3 +1,9 @@
+<?php
+/** 
+ * Author: emimafia
+ *
+ */
+?>
 <div id="homepage-wrapper">
 	<div id="homepage" class="sw">
 	<h2>Der Emimafia Guide</h2>
@@ -66,37 +72,48 @@
 	<div class="flexslider">
 		<ul class="slides">
 			<?php
-				($isinclude === TRUE) ? $dir = 'media/images' : $dir = '../../media/images'; //include query 
-				if(!is_dir($dir)){ //check if folder exists
-					mkdir($dir,0755); //create folder
+			/**
+			 * We lookup all folders that are in /media/images
+			 * add them to an array so that the next loop can
+			 * use it to lookup the content of every folder
+			 */
+				($isinclude === TRUE) ? $dir = 'media/images' : $dir = '../../media/images'; //switch of paths for php include or ajax-request
+				if(!is_dir($dir)){
+					mkdir($dir,0755);
 				}
-				$tmp = opendir($dir); //open folder
-				while($file=readdir($tmp)) { //read file from $tmp
-					if($file != '.' && $file != '..') { //sortiert Verweis auf Ordner (.) und übergeordnetern Ordner (..) aus
-						$dir_arr[] .= $file; //$dir-arr wird um $file erweitert (Datei aus geöffneten Ordner)
+				$tmp = opendir($dir);
+				while($file=readdir($tmp)) {
+					/**
+					 * Skip . and ..
+					 * Loop adds folder content to $dir_arr array
+					 */
+					if($file != '.' && $file != '..') {
+						$dir_arr[] .= $file;
 					}
 				}
-				closedir($tmp); //close folder
-				foreach($dir_arr as &$dir_arr_entry) { //for each entry from $dir_arr go through the loop, here is the entry $dir_arr_entry 
-					$link = array (
-						'frauenkirche' => '1',
-						'semperoper' => '2',
-						'altmarkt' => '3',
-						'grossergarten' => '4',
-						'waldschloesschenbruecke' => '5',
-					); //create a new Arraystructure with the assignment frauenkrche => 1 , ...
-					$tmp = opendir($dir . '/' . $dir_arr_entry); //open folder dir/dir_arr_entry
-					while($file=readdir($tmp)){ //so long that he can not find any other files
-						$fname = $dir . '/' . $dir_arr_entry . '/' . $file; //define folder structure
-						$tnname = $dir . '/' . $dir_arr_entry . '/tn_' . $file; 
-						if(is_file($fname) && strpos($fname,'tn_')=== FALSE){ //sort files with tn out
+				closedir($tmp);
+				foreach($dir_arr as &$dir_arr_entry) {
+					$tmp = opendir($dir . '/' . $dir_arr_entry);
+					while($file=readdir($tmp)){
+						/**
+						 * Define filename and thumbnail filename for the pictures
+						 */
+						$fname = $dir . '/' . $dir_arr_entry . '/' . $file;
+						$tnname = $dir . '/' . $dir_arr_entry . '/tn_' . $file;
+						/** 
+						 * Here we have to sort out the thumbnails so that they won't be shown twice
+						 * Loop shows the slide list elements
+						 */
+						if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
 							echo '
 			<li>
-				<a href="' . $fname . '" data-lightbox="gallery"><img class="thumb" src="' . $tnname . '"  /></a>
-			</li>'; //show the html code with the variable fname and tnname
+				<a href="' . $fname . '" data-lightbox="gallery">
+					<img class="thumb" src="' . $tnname . '"  />
+				</a>
+			</li>';
 						}
 					}
-					closedir($tmp); //close the folder
+					closedir($tmp);
 				}    
 			?>
 		</ul>

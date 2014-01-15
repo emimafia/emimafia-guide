@@ -2,7 +2,10 @@
  * @author emimafia
  * some basic things that shouldn't be in the index
  */
-
+/**
+ * Flexslider Function
+ * Creates Flexslider
+ */
 $(window).load(function() {
   $('.flexslider').flexslider( {
 		animation : "slide",
@@ -12,17 +15,13 @@ $(window).load(function() {
 		maxItems : 8,
 		controlsContainer : '.flex-container' 
   });
-  /*
-   * @TODO Maybe needs some investigation for later
-   */
-  //$('#link-to-point').onClick="top.location.href='/'";
 });
 
 function styleswitch(action) {
 	element = document.getElementById("style");
 	switch(action) {
 		/**
- 		 * size regulation
+		 * Raise the size of the text
 		 */
 		case 'plus':
 			var list = document.getElementsByClassName("sw");
@@ -33,6 +32,9 @@ function styleswitch(action) {
 			document.getElementsByTagName('footer')[0].style.height = "30px";
 			document.getElementById("additional-links").style.width = "310px";
 		break;
+		/**
+		 * Switch back to normal size
+		 */
 		case 'minus':
 			var list = document.getElementsByClassName("sw");
 			for (var i = 0; i < list.length; i++) {
@@ -42,7 +44,7 @@ function styleswitch(action) {
 			document.getElementById("additional-links").removeAttribute('style');
 		break;
 		/**
- 		 * color changer
+ 		 * CSS File Switch
 		 */
 		case 'contrast':
 			if(element.getAttribute('href')=="css/include.css") {
@@ -52,16 +54,6 @@ function styleswitch(action) {
 			else {
 				element.removeAttribute("href");
 				element.setAttribute("href", "css/include.css");				
-			}
-		break;
-		case 'contrast-landing':
-			if(element.getAttribute('href')=="../../css/include.css") {
-				element.removeAttribute("href");
-				element.setAttribute("href", "../../css/include_contrast.css");
-			}
-			else {
-				element.removeAttribute("href");
-				element.setAttribute("href", "../../css/include.css");				
 			}
 		break;
 		default:
@@ -74,4 +66,4 @@ function newcapture() {
   myimg = document.getElementById('captcha');
   myimg.src = '../scripts/templates/capture.php?'+sek;
   return
-} 
+}

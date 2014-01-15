@@ -10,11 +10,15 @@
   var lat = 51.052259;
   var zoom = 13;
   /**
-   * Arrays for Active Markers
+   * Arrays for Active Markers and Popups
    */
   var marker = new Array('0','73','94','80','87','101');
   var popup = new Array('0','72','93','79','86','100');
-
+	/**
+	 * By clicking a link with one of those both classes
+	 * the complete content gets removed and the new content
+	 * will be loaded
+	 */
 	$(document).ready(function(){
 		drawmap();
 		/**

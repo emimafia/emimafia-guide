@@ -1,4 +1,9 @@
 <?php
+/**
+ * Author: emimafia
+ *
+ * Frequently asked question answered
+ */
   $handle=imagecreate(400,200);
   $bgcol=imagecolorallocate($handle,0,0,0);
   $txtcol=imagecolorallocate($handle,100,255,100);

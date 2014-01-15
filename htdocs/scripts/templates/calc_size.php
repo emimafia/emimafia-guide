@@ -1,4 +1,7 @@
 <?php
+/**
+ * Transforms file sizes into human-readable
+ */
 function calc_size($byte=0) {
     
     if($byte < 1024) {

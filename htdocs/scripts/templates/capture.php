@@ -1,4 +1,9 @@
 <?php
+/**
+ * Author: emimafia
+ *
+ * Creates a capture picture
+ */
   session_start();
   $random_dots = 15;
   $random_lines = 7;

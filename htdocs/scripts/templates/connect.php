@@ -1,4 +1,7 @@
 <?php
+/**
+ * Database Connection
+ */
 	$server = 'localhost';
 	$user = 'emimafia_guide';
 	$pw = 'EMI-Dre$den4';

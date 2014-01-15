@@ -1,4 +1,9 @@
 <?php
+/**
+ * Author: emimafia
+ *
+ * creates a thumbnail of given image
+ */
   function thumbnailing($orig,$filename,$maxwidth,$maxheight,$quali=100){
   
     list($width,$height,$type) = getimagesize($orig);

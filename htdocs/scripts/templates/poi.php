@@ -1,9 +1,16 @@
 <?php
+/** 
+ * Author: emimafia
+ * Fetch Database content
+ */
 	require_once('connect.php');
 	mysql_query('set names utf8');
    $poi = $_GET['p'];
 	$query = "SELECT * FROM `POI` WHERE ID=\"$poi\"";
 	$result = mysql_query($query);
+	/**
+	 * normalize title of the poi
+	 */
 	function normalize($str) {
 		$normalize_arr = array (
 			'ä' => 'ae',
@@ -30,6 +37,11 @@
 ?>
 
 <?php
+/**
+ * Define Media Paths
+ * Include what is there in both formats
+ * Skip if there is so Media
+ */
 	$mpdrei = '../../media/audio/' . $lowertitle . '/' . $lowertitle . '.mp3';
 	$ogg = '../../media/audio/' . $lowertitle . '/' . $lowertitle . '.ogg';
 	$mpvier = '../../media/video/' . $lowertitle . '/' . $lowertitle . '.mp4';
@@ -91,30 +103,33 @@
 	<div class="flexslider">
 		<ul class="slides">
 			<?php
-				require_once('thumbnail.php');		// Funktion zum tumbnail erzeugen
+			/**
+			 * Opens given directory
+			 * Reads everything in this directory
+			 * Add it in the right form to the html
+			 */
 				$dir = '../../media/images/' . $lowertitle;		// We need to go to the right directory (../..) because this is not in /
 				if(!is_dir($dir)){
-// 					mkdir($dir,0755); 			Notwendig das zu erzeugen???? Wird doch eh von uns von Hand angelegt Es sollte reichen zu prüfen ob das ein Ordner ist und wenn ja, dann weiter nach else
+					mkdir($dir,0755);
 				}
 				else {
 					$tmp = opendir($dir);
-				  	while($file=readdir($tmp)){
-				  		if($file != '.' && $file != '..') {
+				  while($file=readdir($tmp)){
+				  	/**
+						 * Sort out . and ..
+						 */
+				  	if($file != '.' && $file != '..') {
 					  	$fname = $dir . '/' . $file;
 					    $tnname = $dir . '/tn_' . $file;
-							if(!is_file($tnname) && is_file($fname)==FALSE){					// Prüfen ob thumb existiert => Wenn nicht erzeugen!
-								//@TODO not needed at first. upload.php works now. and this perfectly!!!
-								thumbnailing($dir . '/' . $fname,$dir . $tnname,100,100,70); // @TODO He gets in it but the thumbnailing won't happen. Don't know if you can maybe add some return false for debugging?
-							}
 					    if(is_file($fname) && strpos($fname,'tn_')=== FALSE){
 					    	echo '
-					    <li>
-					    	<a href="' . $fname . '" data-lightbox="gallery"><img class="thumb" src="' . $tnname . '"  /></a>
-					    </li>';
-					        }
+						  <li>
+					  		<a href="' . $fname . '" data-lightbox="gallery"><img class="thumb" src="' . $tnname . '"  /></a>
+						  </li>';
 					      }
-							}
-						closedir($tmp); 
+					    }
+						}
+					closedir($tmp); 
 				}
 			?>
 		</ul>

@@ -1,19 +1,31 @@
 <?php
+/** 
+ * Author: emimafia
+ */
 
 require('calc_size.php');
 /**
- * I fixed it. The only thing you need to do is to give the right directory
+ * You need to give the right directory
  */
 $title = ''; //Give the title as lowerstring here
 $dir = '../../media/images/' . $title;
 
 if($title == '') {
+	/**
+	 * Prevent unauthorized upload
+	 * The title must be empty on live
+	 */
 	die('Keep the change you filthy animal.');
 }
 
 if(!is_dir($dir)){
   mkdir($dir,0755);
 }
+/**
+ * Upload for Images given through the form
+ * Renaming and creation of thumbnail
+ * Security relevant processing
+ */
 if(isset($_FILES) && count($_FILES)>0){
   $file = $_FILES["upload"];
   $info = pathinfo($file['name']);
@@ -29,26 +41,31 @@ if(isset($_FILES) && count($_FILES)>0){
     copy($file['tmp_name'],$dir . '/' . $name);
     
     require('thumbnail.php');
-   
+		/**
+		 * 
+		 */
     thumbnailing($dir . '/' . $name,$dir . '/tn_' . $name,100,100,70); 
     
     echo '<script>top.location.href="' . $_SERVER['REQUEST_URI'] . '"</script>';
   }
 }
-
-if(isset($_GET["delfile"]) && !empty($_GET['delfile']) && base64_decode($_GET['check'])==$_GET['delfile']) {
-  if (strpos($_GET['delfile'],'tn_')===0) {
-    $exploded_del = explode('_',$_GET['delfile']);
-    unlink($dir . '/' . $_GET["delfile"]);
-    unlink($dir . '/' . $exploded_del['1']);
-  }
-  else {
-    unlink($dir . '/' . $_GET["delfile"]);
-    unlink($dir . '/tn_' . $_GET["delfile"]);
-  } 
-  
-    echo '<script>top.location.href="./upload.php"</script>';
-}
+/**
+ * Live file deletion
+ * Not needed for current project
+ */
+// if(isset($_GET["delfile"]) && !empty($_GET['delfile']) && base64_decode($_GET['check'])==$_GET['delfile']) {
+  // if (strpos($_GET['delfile'],'tn_')===0) {
+    // $exploded_del = explode('_',$_GET['delfile']);
+    // unlink($dir . '/' . $_GET["delfile"]);
+    // unlink($dir . '/' . $exploded_del['1']);
+  // }
+  // else {
+    // unlink($dir . '/' . $_GET["delfile"]);
+    // unlink($dir . '/tn_' . $_GET["delfile"]);
+  // } 
+//   
+    // echo '<script>top.location.href="./upload.php"</script>';
+// }
 
 ?>
     <p>
@@ -62,6 +79,9 @@ if(isset($_GET["delfile"]) && !empty($_GET['delfile']) && base64_decode($_GET['c
     </p> 
     <table>
     <?php
+    /**
+		 * Print a nice table with picture information
+		 */
       $tmp = opendir($dir);
       while($file=readdir($tmp)){
         $fname = $dir . '/' . $file;

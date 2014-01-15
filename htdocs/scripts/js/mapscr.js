@@ -31,12 +31,6 @@ function addMarker(layer, lon, lat, popupContentHTML) {
     marker.feature = feature;
  
     var markerClick = function(evt) {
-    	/**
-    	 * For Switching of the marker Images
-    	 */
-    	// OpenLayers.Marker.defaultIcon = function () {
-    		// return new OpenLayers.Icon ("css/images/marker_active.svg", {w:23, h:27}, {x: -10, y:-30});
-			// };
         if (this.popup == null) {
             this.popup = this.createPopup(this.closeBox);
             map.addPopup(this.popup);
@@ -56,8 +50,7 @@ function addMarker(layer, lon, lat, popupContentHTML) {
 		map.addPopup(feature.createPopup(feature.closeBox));
 		
 		/**
-		 * @TODO This is a dirty critical fix. Two of them still toggle but the other 3 won't. Needs Investigation!!!
-		 * @TODO It seems to depend on the size of the popup. Strange
+		 * Close all popups after creation
 		 */
 		var poplist = document.getElementsByClassName("olPopup");
 		for (var i = 0; i < poplist.length; i++) {
