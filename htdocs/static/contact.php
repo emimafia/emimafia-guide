@@ -102,8 +102,8 @@ if(isset($_POST) && count($_POST)>0) {
 	      </p>
 	      <p>
 	        <label <?php if(isset($plzstyle) || isset($ortstyle)) echo $plzstyle; ?> class="contactlabel">PLZ / Ort</label>
-	        <input type="text" maxlenght="5" size="5" value="<?php if(isset($_POST['plz'])) echo $_POST['plz'] ?>" name="plz" />
-	        <input type="text" size="33" value="<?php if(isset($_POST['ort'])) echo $_POST['ort'] ?>" name="ort" />
+	        <input id="plz" type="text" maxlenght="5" size="5" value="<?php if(isset($_POST['plz'])) echo $_POST['plz'] ?>" name="plz" />
+	        <input id="place" type="text" size="33" value="<?php if(isset($_POST['ort'])) echo $_POST['ort'] ?>" name="ort" />
 	      </p>
 	      <p>
 	        <label class="contactlabel" for="strasse">Strasse</label>
@@ -115,7 +115,7 @@ if(isset($_POST) && count($_POST)>0) {
 	      </p>
 	      <p>
 	        <label <?php if(isset($textstyle)) echo $textstyle; ?> class="contactlabel" for="text">Nachricht</label>
-	        <textarea id="text" required="required" cols="48" name="text" rows="10"><?php if(isset($_POST['text']))echo $_POST['text'] ?></textarea>
+	        <textarea id="text" required="required" cols="33" name="text" rows="10"><?php if(isset($_POST['text']))echo $_POST['text'] ?></textarea>
 	      </p>
 	      <p>
 	        <label <?php if(isset($codestyle)) echo $codestyle; ?>class="contactlabel" for="code">Code</label>
@@ -130,8 +130,8 @@ if(isset($_POST) && count($_POST)>0) {
 	      </p>
 	      <p>
 		      <label class="contactlabel">&nbsp;</label>
-		      <input id="contactsubmit" type="Submit" value="Senden" name="" />
-		      <input type="reset" value="Zur&uuml;cksetzen" />
+		      <input id="contactsubmit" class="contactbutton" type="Submit" value="Senden" name="" />
+		      <input class="contactbutton" type="reset" value="Zur&uuml;cksetzen" />
 	      </p>
       </form>
       <div class="clearfix"></div>

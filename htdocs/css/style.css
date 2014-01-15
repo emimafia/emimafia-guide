@@ -235,18 +235,37 @@ tbody td {
 /**
  * 	Contact
  */
+form p {
+	width: 520px;
+}
 .contactlabel {
 	width: 150px;
 }
-label{
+.contactbutton {
+	width: 90px;
+}
+#plz {
+	width: 90px;
+}
+#place {
+	width: 247px;
+}
+label {
 	float: left;
 	display: block;
 	width: 70px;
 	margin-left: 10px;
 }
+input {
+	width: 350px;
+}
 textarea {
 	resize: none;
+	width: 350px;
 }
+/**
+ * 	Gallery
+ */
 #gallery {
 	border-top: 16px solid #FFDD57;
 	height: 112px;
