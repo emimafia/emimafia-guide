@@ -4,11 +4,14 @@
  */
 	var loading ='<section class="loading"><img src="css/images/ajax-loader.gif" alt="Ajax Loader">Bitte warten, die Inhalte werden geladen...</section>';
   var lon = 13.73836112;
-  var lat = 51.059259;
-  var zoom = 13; 
-	
+  var lat = 51.052259;
+  var zoom = 13;
+  var marker = new Array('0','73','94','80','87','101');
+  var popup = new Array('0','72','93','79','86','100');
+
 	$(document).ready(function(){
-		drawmap();$('a.ajax-nonpoi').click(function(){
+		drawmap();
+		$('a.ajax-nonpoi').click(function(){
 			link = $(this).attr('href');
 			
 			$('#content div').fadeOut('slow');
@@ -87,6 +90,8 @@
 							$('#content').html(data);
 							$('#content').removeAttr('style');
   						$('.olPopup').css('display', 'none');
+							$('#OpenLayers_Feature_' + popup[p] + '_popup').css('display','block');
+							$('#OL_Icon_' + marker[p] + '_innerImage').attr('src','css/images/marker_active.svg');
 							$('.flexslider').flexslider({
 								animation : "slide",
 								animationLoop : true,
@@ -104,3 +109,7 @@
 			return false;
 		});
 	});
+	/**
+	 * var poi = 73;
+$('#OL_Icon_' + poi + '_innerImage').attr('src','css/images/marker_active.svg')
+	 */
