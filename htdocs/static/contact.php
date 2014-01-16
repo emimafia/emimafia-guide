@@ -99,7 +99,7 @@ if(isset($_POST) && count($_POST)>0) {
     	</section>
 		<div id="full-description" class="sw">
   		<h2>Kontakt</h2>
-  		<p>Comming soon</p>
+  		<p>Aus Sicherheitsgründen ist zur Zeit das Senden von E-Mails deaktiviert - Sobald die Lücke geschlossen ist, wird es wieder aktiviert.</p>
       <form action="<?php //echo $_SERVER['REQUEST_URI'] ?>" method="post">
 	      <p>
 	        <?php if(isset($_GET['erfolg']) && $_GET['erfolg']==1) die('<p>Vielen Dank f&uuml;r Deine Mail</p><p><a href="./">Zur&uuml;ck</a></p>'); ?> &nbsp; 
