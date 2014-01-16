@@ -98,8 +98,9 @@ if(isset($_POST) && count($_POST)>0) {
     		Bitte warten, die Inhalte werden geladen...
     	</section>
 		<div id="full-description" class="sw">
-  		<h2>Contact</h2>
-      <form action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post">
+  		<h2>Kontakt</h2>
+  		<p>Comming soon</p>
+      <form action="<?php //echo $_SERVER['REQUEST_URI'] ?>" method="post">
 	      <p>
 	        <?php if(isset($_GET['erfolg']) && $_GET['erfolg']==1) die('<p>Vielen Dank f&uuml;r Deine Mail</p><p><a href="./">Zur&uuml;ck</a></p>'); ?> &nbsp; 
 	      </p>
