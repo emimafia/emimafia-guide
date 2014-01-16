@@ -93,6 +93,10 @@ if(isset($_POST) && count($_POST)>0) {
 	}
 }
 ?>
+    	<section class="loading">
+    		<img src="css/images/ajax-loader.gif" alt="Ajax Loader" />
+    		Bitte warten, die Inhalte werden geladen...
+    	</section>
 		<div id="full-description" class="sw">
   		<h2>Contact</h2>
       <form action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post">

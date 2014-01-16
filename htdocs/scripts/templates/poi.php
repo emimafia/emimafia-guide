@@ -48,6 +48,10 @@
 	$ogv = '../../media/video/' . $lowertitle . '/' . $lowertitle . '.ogv';
 	if((is_file($mpdrei) && is_file($ogg)) || (is_file($ogv) && is_file($mpvier)) || $lowertitle == 'waldschloesschenbruecke') {
 ?>
+    	<section class="loading">
+    		<img src="css/images/ajax-loader.gif" alt="Ajax Loader" />
+    		Bitte warten, die Inhalte werden geladen...
+    	</section>
 <div id="description" class="sw">
 	<h2>
 		<?php echo $title; ?>

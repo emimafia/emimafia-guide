@@ -4,6 +4,10 @@
  *
  */
 ?>
+    	<section class="loading">
+    		<img src="css/images/ajax-loader.gif" alt="Ajax Loader" />
+    		Bitte warten, die Inhalte werden geladen...
+    	</section>
 <div id="homepage-wrapper">
 	<div id="homepage" class="sw">
 	<h2>Der Emimafia Guide</h2>

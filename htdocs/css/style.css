@@ -161,6 +161,9 @@ header #osm a {
 	background: #CCCCCC;
 	position: relative;
 }
+.loading {
+	display: none;
+}
 #content #homepage {
 	float: left;
 	background: transparent;

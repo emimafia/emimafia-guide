@@ -38,12 +38,11 @@
 				paddingBottom: "0"
 			}, 'slow', function(){
 				$('#content div').remove();
-				$('content').append(loading);
+				$('.loading').css('display','block');
 				
 				$('#content').animate({
-					paddingTop: "20",
-					paddingBottom: "20",
-					height: "0"
+					height: "35",
+					paddingBottom: "10"
 				}, 'slow');
 				
 				$.get(link, function(data, success){
@@ -54,7 +53,7 @@
 							paddingTop: "0",
 							paddingBottom: "0"
 						}, 'slow', function(){
-							$('#content section').remove();
+							//$('#content section').remove();
 							$('#content').html(data);
 							$('#content').removeAttr('style');
   						jumpTo(lon, lat, zoom);
@@ -94,12 +93,11 @@
 				paddingBottom: "0"
 			}, 'slow', function(){
 				$('#content div').remove();
-				$('content').append(loading);
+				$('.loading').css('display','block');
 				
 				$('#content').animate({
-					paddingTop: "20",
-					paddingBottom: "20",
-					height: "0"
+					height: "35",
+					paddingBottom: "10"
 				}, 'slow');
 				
 				$.get(link, function(data, success){
