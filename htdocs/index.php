@@ -114,7 +114,7 @@
     	?>
     </div>
     <footer>
-    <div id="additional-links" class="sw"><a href="static/impressum.html" class="ajax-nonpoi">Impressum</a> | <a href="static/contact.php" class="ajax-nonpoi">Contact</a> | <a href="static/faq.html" class="ajax-nonpoi">FAQ</a></div>
+    <div id="additional-links" class="sw"><a href="static/impressum.html" class="ajax-nonpoi">Impressum</a> | <a href="static/contact.php" class="ajax-nonpoi">Kontakt</a> | <a href="static/faq.html" class="ajax-nonpoi">FAQ</a></div>
     </footer>
   </div>
 </body>
