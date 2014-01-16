@@ -2,3 +2,4 @@ config
 .project
 .settings
 htdocs/.metadata
+htdocs/scripts/templates/connect.php
